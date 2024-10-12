@@ -1,7 +1,7 @@
 const Button = ({ content }) => {
   return (
     <>
-      <div className={`text-white bg-btn  px-4`}>{content}</div>
+      <div className={`text-white bg-btn`}>{content}</div>
     </>
   );
 };

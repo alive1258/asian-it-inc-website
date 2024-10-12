@@ -1,11 +1,51 @@
-import React from "react";
+import HeroDescription from "./HeroDescription";
+import OurTechnology from "./OurTechnology";
 
-const Hero = () => {
-  return (
-    <div className=" h-screen bg-gray-300">
-      <div className="container pt-20">hero</div>
-    </div>
-  );
+const Hero = async () => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/heros`, {
+      next: {
+        revalidate: 30,
+      },
+    });
+    const heroDescriptions = await res.json();
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/technologies`,
+      {
+        next: {
+          revalidate: 30,
+        },
+      }
+    );
+    const ourTechnologies = await response.json();
+
+    return (
+      <>
+        <div className="h-screen">
+          <div className="md:pt-0 pt-28 md:flex items-center ">
+            <div className="container relative md:flex items-center justify-between md:gap-40">
+              <div>
+                <div className="moon "></div>
+                {/* {heroDescriptions?.data?.slice(0, 1)?.map((heroDescription) => (
+                <HeroDescription
+                  key={heroDescription?._id}
+                  heroDescription={heroDescription}
+                />
+              ))} */}
+                <h1 className="text-gray-800">hero</h1>
+              </div>
+
+              <div className="md:pt-0 pt-20 md:pl-0 pl-7">
+                <OurTechnology ourTechnologies={ourTechnologies} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  } catch {
+    return null;
+  }
 };
 
 export default Hero;

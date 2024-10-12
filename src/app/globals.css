@@ -5,7 +5,7 @@
 /* Color variable declarer  */
 @layer base {
   :root {
-    --color-primary-base: #8e4fae;
+    --color-primary-base: #3137f8;
     --color-tertiary-base: #c07fe0;
     --color-primary-muted: #f1f1f1;
     --color-secondary-base: #e8292f;
@@ -182,14 +182,82 @@
   .bg-btn:hover {
     background: linear-gradient(270deg, #550495 0%, #ce24f8 100%);
   } */
-
+  .outline-btn {
+    @apply text-white border duration-300 border-[#3137F8] hover:text-[#fff] hover:bg-[#3137F8] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-[16px] px-5 py-2 text-center;
+  }
   .bg-btn {
-    @apply bg-gradient-to-r md:text-[15px] text-[13px] from-indigo-500 via-purple-500 to-pink-500 cursor-pointer hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg py-[10px];
+    @apply bg-[#3137F8] cursor-pointer   font-medium rounded-3xl text-[16px] px-5 py-2.5 text-center;
   }
 }
 /* .bg-btn {
   @apply bg-gradient-to-r md:text-[15px] text-[13px] from-indigo-500 via-purple-500 to-pink-500 cursor-pointer hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg py-[10px];
 } */
+
+/* swiper custom bullets design  */
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 6px !important;
+  background-color: #7074ec !important;
+  border-radius: 16px !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px !important;
+  background-color: #6d71fa !important;
+}
+
+/* Custom Navigation Arrows */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler .swiper-button-next {
+  left: calc(100% - 2px) !important;
+  transform: translateX(-100%) !important;
+}
+.slider-controler .slider-arrow {
+  margin-top: 105px;
+  color: #6d71fa;
+  left: 90%;
+  transform: translateX(-90%);
+}
+
+.slider-controler {
+  margin-top: 45px;
+}
+
+.slider-controler .slider-arrow::after {
+  content: "";
+}
+
+.swiper-pagination {
+  /* position: relative; */
+  width: 135px !important;
+  /* bottom: 1rem; */
+}
+@media only screen and (min-width: 768px) {
+  .swiper-pagination {
+    width: 7rem !important;
+  }
+  .slider-controler .slider-arrow {
+    margin-top: 100px;
+    color: #6d71fa;
+    left: 97%;
+    transform: translateX(-97%);
+  }
+  .text-stroke {
+    font-size: 4em;
+  }
+}
+
+.text-stroke {
+  margin: 0;
+  font-size: 3em;
+  -webkit-text-stroke-color: #6d71fa;
+  -webkit-text-stroke-width: thin;
+}
 
 @layer components {
   .text-h1 {

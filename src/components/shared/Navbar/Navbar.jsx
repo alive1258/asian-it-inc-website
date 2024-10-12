@@ -2,40 +2,23 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { HiMiniXMark } from "react-icons/hi2";
-
-import { HiOutlineBars3BottomLeft } from "react-icons/hi2";
-import Button from "@/components/UI/Button/Button";
-// import ethenSoftLogo from "../../../../public/assets/images/about/eslogo.png";
+import { HiMiniXMark, HiOutlineBars3BottomLeft } from "react-icons/hi2";
+import ButtonOutline from "@/components/UI/Button/ButtonOutline";
+import asianItIncLogo from "../../../../public/assets/images/logo.png";
+import { useScroll } from "@/utils/scrollUtils";
 
 const Navbar = () => {
   const pathName = usePathname();
   const [open, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // const handleLoginModal = () => {
-  //   dispatch(registerModalToggle());
-  // };
+  const isScrolled = useScroll(); // Use the utility function
 
   const topFunction = () => {
     setOpen(!open);
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const items = [
     { display: "Home", path: "/" },
@@ -60,19 +43,19 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center space-x-2">
-            {/* <Image
+            <Image
               className="md:size-12 size-9"
-              src={ethenSoftLogo}
+              src={asianItIncLogo}
               height={28}
               width={151}
               alt="logo"
-            /> */}
+            />
             <h3
               className={`md:text-2xl text-lg font-bold ${
-                isScrolled ? "text-gradient" : "text-[#fff]"
+                isScrolled ? "text-[#3137F8]" : "text-[#fff]"
               }`}
             >
-              EthenSoft
+              ASIAN IT INC
             </h3>
           </div>
         </Link>
@@ -113,7 +96,7 @@ const Navbar = () => {
                 className={`md:ml-6 font-normal duration-300 ${
                   isActive
                     ? `font-semibold  ${
-                        isScrolled ? "text-gradient" : "text-gradient"
+                        isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
                       }`
                     : `${isScrolled ? "md:text-gray-900" : "md:text-white"}`
                 }`}
@@ -125,14 +108,10 @@ const Navbar = () => {
           })}
 
           <div className="md:ml-8">
-            {/* <div onClick={handleLoginModal} className="md:ml-8"> */}
-            <Button content="Login" />
+            <Link href="/contact-us">
+              <ButtonOutline className="" content="Contact Us" />
+            </Link>
           </div>
-          {/* {registerValue && (
-            <Modal>
-              <Register />
-            </Modal>
-          )} */}
         </ul>
       </div>
     </div>
