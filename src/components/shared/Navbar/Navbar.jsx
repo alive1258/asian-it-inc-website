@@ -89,16 +89,37 @@ const Navbar = () => {
         >
           {items.map(({ display, path }) => {
             const isActive = pathName === path;
+            const isActiveAbout = pathName === "/about-us";
             return (
+              // <Link
+              //   onClick={topFunction}
+              //   key={display}
+              //   className={`md:ml-6 font-normal duration-300  ${
+              //     isActive
+              //       ? `font-semibold  ${
+              //           isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
+              //         }`
+              //       : `${isScrolled ? "md:text-gray-900" : "md:text-white"}`
+              //   }`}
+              //   href={path}
+              // >
+              //   {display}
+              // </Link>
               <Link
                 onClick={topFunction}
                 key={display}
                 className={`md:ml-6 font-normal duration-300 ${
                   isActive
-                    ? `font-semibold  ${
+                    ? `font-semibold ${
                         isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
                       }`
-                    : `${isScrolled ? "md:text-gray-900" : "md:text-white"}`
+                    : `${
+                        isActiveAbout
+                          ? "text-gray-900" // Always apply text-gray-900 for About Us
+                          : isScrolled
+                          ? "md:text-gray-900"
+                          : "md:text-white"
+                      }`
                 }`}
                 href={path}
               >
@@ -109,7 +130,7 @@ const Navbar = () => {
 
           <div className="md:ml-8">
             <Link href="/contact-us">
-              <ButtonOutline className="" content="Contact Us" />
+              <ButtonOutline className="text-black" content="Contact Us" />
             </Link>
           </div>
         </ul>

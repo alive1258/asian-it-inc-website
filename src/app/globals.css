@@ -48,6 +48,9 @@
   background-color: #1557b9;
   border-radius: 10px;
 }
+.rfm-marquee-container::-webkit-scrollbar {
+  width: 0px;
+}
 
 /* css base animation  */
 

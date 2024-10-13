@@ -6,54 +6,56 @@ import icon2 from "../../../../../public/assets/images/starIcon.png";
 const ServiceMarquee = () => {
   return (
     <>
-      <div className="py-16 space-y-8 bg-[#040408]">
+      <div className="py-16  space-y-8 bg-[#040408] ">
         {/* left marquee  */}
-        <Marquee
-          gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
-          <div className="flex items-center gap-5 mr-8">
-            <Image
-              className="size-12 md:size-16"
-              src={icon}
-              width={64}
-              height={64}
-              alt="icon"
-            />
-            <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
-              Senior software developer
-            </h1>
-          </div>
-          <div className="flex items-center gap-5 mr-8">
-            <Image
-              className="size-12 md:size-16"
-              src={icon}
-              width={64}
-              height={64}
-              alt="icon"
-            />
-            <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
-              Senior software developer
-            </h1>
-          </div>
-          <div className="flex items-center gap-5 mr-8">
-            <Image
-              className="size-12 md:size-16"
-              src={icon}
-              width={64}
-              height={64}
-              alt="icon"
-            />
-            <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
-              Senior software developer
-            </h1>
-          </div>
-        </Marquee>
+        <div>
+          <Marquee
+            gradient={false}
+            speed={80}
+            pauseOnHover={true}
+            pauseOnClick={true}
+            delay={0}
+            play={true}
+            direction="left"
+          >
+            <div className="flex items-center gap-5 mr-8">
+              <Image
+                className="size-12 md:size-16"
+                src={icon}
+                width={64}
+                height={64}
+                alt="icon"
+              />
+              <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
+                Senior software developer
+              </h1>
+            </div>
+            <div className="flex items-center gap-5 mr-8">
+              <Image
+                className="size-12 md:size-16"
+                src={icon}
+                width={64}
+                height={64}
+                alt="icon"
+              />
+              <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
+                Senior software developer
+              </h1>
+            </div>
+            <div className="flex items-center gap-5 mr-8">
+              <Image
+                className="size-12 md:size-16"
+                src={icon}
+                width={64}
+                height={64}
+                alt="icon"
+              />
+              <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
+                Senior software developer
+              </h1>
+            </div>
+          </Marquee>
+        </div>
 
         {/* right marquee  */}
         <Marquee

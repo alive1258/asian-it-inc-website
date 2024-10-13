@@ -9,9 +9,9 @@ import Button from "../../Button/Button";
 const AboutHome = () => {
   return (
     <>
-      <div className="bg-[#fff]">
+      <div className="bg-[#EFEFFE] py-16">
         <div className="container ">
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
             <div className=" bg-[url('/assets/images/homeAboutBg.png')] py-20 bg-cover bg-center bg-no-repeat ">
               {/* <div className="bg-[url('/assets/images/homeAboutBg.png')] py-20 bg-cover bg-center bg-no-repeat bg-opacity-40"> */}
               <div className="opacity-100 z-50">
