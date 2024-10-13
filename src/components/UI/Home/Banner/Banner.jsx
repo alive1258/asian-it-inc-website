@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import ButtonOutline from "../../Button/ButtonOutline";
+
 import Button from "../../Button/Button";
 import Image from "next/image";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
-import bannerImage from "../../../../../public/assets/images/bannerbg.png";
+
 import { FaStar } from "react-icons/fa";
 
 const Banner = () => {
@@ -39,7 +39,9 @@ const Banner = () => {
                   </Link>
                 </div>
                 <div>
-                  <Button content="Contact Us" />
+                  <Link href="/contact-us">
+                    <Button content="Contact Us" />
+                  </Link>
                 </div>
               </div>
               <div className="pt-16">

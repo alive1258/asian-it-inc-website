@@ -125,6 +125,8 @@ const AboutHome = () => {
                 <Image
                   className="w-full relative bottom-3 left-3 h-auto"
                   src={imageAi}
+                  height={400}
+                  width={400}
                   alt="home about image"
                 />
               </div>
@@ -132,6 +134,8 @@ const AboutHome = () => {
                 <Image
                   className="size-20 rounded-full"
                   src={platBtn}
+                  height={20}
+                  width={20}
                   alt="home about image"
                 />
               </div>

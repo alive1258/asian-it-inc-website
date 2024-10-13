@@ -1,7 +1,15 @@
 import AboutHome from "@/components/UI/Home/AboutHome/AboutHome";
 import Banner from "@/components/UI/Home/Banner/Banner";
+import Blogs from "@/components/UI/Home/Blogs/Blogs";
+import Brands from "@/components/UI/Home/Brands/Brands";
+import Contact from "@/components/UI/Home/Contact/Contact";
+import FaqHome from "@/components/UI/Home/FaqHome/FaqHome";
 import Hero from "@/components/UI/Home/Hero/Hero";
+import OurProducts from "@/components/UI/Home/OurProducts/OurProducts";
+import OurWorks from "@/components/UI/Home/OurWorks/OurWorks";
 import ServiceMarquee from "@/components/UI/Home/ServiceMarquee/ServiceMarquee";
+import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
+import WhyTrustUs from "@/components/UI/Home/WhyTrustUs/WhyTrustUs";
 
 export default function Home() {
   return (
@@ -10,6 +18,14 @@ export default function Home() {
         <Banner />
         <ServiceMarquee />
         <AboutHome />
+        <OurProducts />
+        <WhyTrustUs />
+        <Brands />
+        <OurWorks />
+        <Testimonials />
+        <Blogs />
+        <FaqHome />
+        <Contact />
       </main>
     </>
   );
