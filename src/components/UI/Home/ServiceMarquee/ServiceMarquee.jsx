@@ -1,9 +1,19 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import icon from "../../../../../public/assets/images/starIcon.png";
-import icon2 from "../../../../../public/assets/images/starIcon.png";
+const ServiceMarquee = async () => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/service-marquee`,
+    {
+      next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+    }
+  );
 
-const ServiceMarquee = () => {
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+  const serviceMarqueeData = data?.data || [];
   return (
     <>
       <div className="py-16  space-y-8 bg-[#040408] ">
@@ -18,42 +28,20 @@ const ServiceMarquee = () => {
             play={true}
             direction="left"
           >
-            <div className="flex items-center gap-5 mr-8">
-              <Image
-                className="size-12 md:size-16"
-                src={icon}
-                width={64}
-                height={64}
-                alt="icon"
-              />
-              <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
-                Senior software developer
-              </h1>
-            </div>
-            <div className="flex items-center gap-5 mr-8">
-              <Image
-                className="size-12 md:size-16"
-                src={icon}
-                width={64}
-                height={64}
-                alt="icon"
-              />
-              <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
-                Senior software developer
-              </h1>
-            </div>
-            <div className="flex items-center gap-5 mr-8">
-              <Image
-                className="size-12 md:size-16"
-                src={icon}
-                width={64}
-                height={64}
-                alt="icon"
-              />
-              <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
-                Senior software developer
-              </h1>
-            </div>
+            {serviceMarqueeData?.map((item, index) => (
+              <div key={index} className="flex items-center gap-5 mr-8">
+                <Image
+                  className="size-12 md:size-16"
+                  src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
+                  width={64}
+                  height={64}
+                  alt="icon"
+                />
+                <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
+                  {item?.name}
+                </h1>
+              </div>
+            ))}
           </Marquee>
         </div>
 
@@ -67,42 +55,20 @@ const ServiceMarquee = () => {
           play={true}
           direction="right"
         >
-          <div className="flex items-center gap-5 mr-8">
-            <Image
-              className="size-12 md:size-16"
-              src={icon2}
-              width={64}
-              height={64}
-              alt="icon"
-            />
-            <h1 className="text-stroke text-transparent text-5xl md:text-[64px] font-bold uppercase">
-              Senior software developer
-            </h1>
-          </div>
-          <div className="flex items-center gap-5 mr-8">
-            <Image
-              className="size-12 md:size-16"
-              src={icon2}
-              width={64}
-              height={64}
-              alt="icon"
-            />
-            <h1 className="text-stroke text-transparent text-5xl md:text-[64px] font-bold uppercase">
-              Senior software developer
-            </h1>
-          </div>
-          <div className="flex items-center gap-5 mr-8">
-            <Image
-              className="size-12 md:size-16"
-              src={icon2}
-              width={64}
-              height={64}
-              alt="icon"
-            />
-            <h1 className="text-stroke text-transparent text-5xl md:text-[64px] font-bold uppercase">
-              Senior software developer
-            </h1>
-          </div>
+          {serviceMarqueeData?.map((item, index) => (
+            <div key={index} className="flex items-center gap-5 mr-8">
+              <Image
+                className="size-12 md:size-16"
+                src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
+                width={64}
+                height={64}
+                alt="icon"
+              />
+              <h1 className="text-stroke text-transparent text-5xl md:text-[64px] font-bold uppercase">
+                {item?.name}
+              </h1>
+            </div>
+          ))}
         </Marquee>
       </div>
     </>

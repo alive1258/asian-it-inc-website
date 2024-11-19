@@ -1,9 +1,18 @@
 import React from "react";
-import BlogSection from "./BlogSection";
 import Link from "next/link";
 import ButtonOutline from "../../Button/ButtonOutline";
+import BlogSection from "./BlogSection";
+const Blogs = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
 
-const Blogs = () => {
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await res.json();
+  const blogsData = data?.data || [];
+  console.log(blogsData, "blogsDatablogsDatablogsData")
   return (
     <>
       <div className="bg-[#E4E5FE]">
@@ -25,14 +34,14 @@ const Blogs = () => {
                 >
                   The Latest from our Blog
                 </h1>
-                <p className="text-[20px] pt-2 font-normal text-center w-[490px]">
+                <p className=" text-sm md:text-[18px] pt-2 font-normal text-center w-[490px]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt dolore.
                 </p>
               </div>
             </div>
             <div>
-              {/* <BlogSection blogs={blogs} /> */}
+              <BlogSection blogs={blogsData} />
               <div className="mt-16">
                 <Link href="/blogs">
                   <ButtonOutline content="More Blogs" />

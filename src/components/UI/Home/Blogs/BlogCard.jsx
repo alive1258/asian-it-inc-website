@@ -11,19 +11,19 @@ const BlogCard = ({ blog }) => {
   });
   return (
     <>
-      <div className="reveal shadow-custom-10px bg-[#fff] rounded-lg hover:scale-105 delay-150 duration-300 transition-all">
+      <div className=" shadow-custom-10px bg-[#fff] rounded-lg hover:scale-105 delay-150 duration-300 transition-all">
         <Image
-          className="rounded-t-lg"
-          src={blog?.image}
+          className="rounded-t-lg h-[250px]"
+          src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${blog?.photo}`}
           width={413}
-          height={250}
+          height={300}
           alt="blog"
         />
         <div className="p-5 space-y-6">
           <div className="flex items-center gap-4">
             <span className="text-black-base">{formattedDate}</span>
             <span className="w-2.5 h-2.5 bg-warning-base rounded-full"></span>
-            <h6 className="font-medium text-primary-base">{blog?.subject}</h6>
+            <h6 className="font-medium text-primary-base">{blog?.name}</h6>
           </div>
           <h1 className="text-black-base text-xl font-semibold">
             {blog?.title}
