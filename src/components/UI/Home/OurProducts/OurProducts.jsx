@@ -1,19 +1,28 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import productPic from "../../../../../public/assets/images/product.png";
+import React, { useState } from "react";
 import ProductHoverEffect from "./ProductHoverEffect";
 import Link from "next/link";
+import {
+  useGetAllProductsQuery,
+  useGetAllTopCategoryQuery,
+} from "@/redux/api/homeApi";
 
 const OurProducts = () => {
+  const [category, setCategory] = useState(null);
+  const { data: topCategories, error } = useGetAllTopCategoryQuery();
+  const { data: allProducts, refetch } = useGetAllProductsQuery(category);
+  const handleOnclick = (item) => {
+    setCategory(item);
+    refetch();
+  };
+
   return (
     <>
       {/* <div className="bg-gradient-to-r from-black from-10% via-gray-950 via-15% to-gray-900 to-55% "> */}
       <div>
-        <div className="relative bg-gradient-to-r from-black to-gray-900 overflow-hidden">
+        <div className="bg-gradient-to-r from-black to-gray-900">
           <div className="bg-[url('/assets/images/productBg.png')] bg-cover bg-no-repeat ">
-            <div className="absolute z-[0] w-[593.727px] h-[531.226px] bg-[#E9C12F] rounded-[593.727px] -top-[345.17px] right-0 opacity-40 blur-[150px]" />
-            <div className="absolute z-[0] w-[699.729px] h-[626.07px] bg-[#5158DA] rounded-[699.729px] -bottom-[377.762px] left-[152.271px] opacity-40 blur-[125px]" />
-
             <div className="container text-white">
               <div className="flex justify-center pt-14 ">
                 <div>
@@ -36,76 +45,42 @@ const OurProducts = () => {
 
               <div className="pt-16 ">
                 <div className="flex justify-center ">
-                  <ul className="flex space-x-10 text-[20px] font-medium ">
-                    <li>All</li>
-                    <li>Mobile</li>
-                    <li>Web</li>
-                    <li>Sass</li>
-                    <li>Dashboard</li>
+                  <ul className="flex space-x-10  font-medium ">
+                    <li
+                      onClick={() => handleOnclick(null)}
+                      className={` ${
+                        category == null ? " text-primary-base " : ""
+                      } text-sm md:text-[20px] cursor-pointer `}
+                    >
+                      All
+                    </li>
+                    {topCategories?.data?.map((item) => (
+                      <li
+                        onClick={() => handleOnclick(item.id)}
+                        className={` ${
+                          category === item?.id ? "text-primary-base" : ""
+                        } text-sm md:text-[20px] cursor-pointer`}
+                        key={item?.id}
+                      >
+                        {item?.name}
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
-                <div className="pt-16 grid sm:grid-cols-3  gap-5">
-                  <div className="relative  group">
-                    <Image
-                      className="h-[296px] rounded-lg object-cover w-full "
-                      src={productPic}
-                      height={296}
-                      width={413}
-                      alt="product"
-                    />
-                    <ProductHoverEffect />
-                  </div>
-                  <div className="relative  group">
-                    <Image
-                      className="h-[296px] rounded-lg object-cover w-full "
-                      src={productPic}
-                      height={296}
-                      width={413}
-                      alt="product"
-                    />
-                    <ProductHoverEffect />
-                  </div>
-                  <div className="relative  group">
-                    <Image
-                      className="h-[296px] rounded-lg object-cover w-full "
-                      src={productPic}
-                      height={296}
-                      width={413}
-                      alt="product"
-                    />
-                    <ProductHoverEffect />
-                  </div>
-                  <div className="relative  group">
-                    <Image
-                      className="h-[296px] rounded-lg object-cover w-full "
-                      src={productPic}
-                      height={296}
-                      width={413}
-                      alt="product"
-                    />
-                    <ProductHoverEffect />
-                  </div>
-                  <div className="relative  group">
-                    <Image
-                      className="h-[296px] rounded-lg object-cover w-full "
-                      src={productPic}
-                      height={296}
-                      width={413}
-                      alt="product"
-                    />
-                    <ProductHoverEffect />
-                  </div>
-                  <div className="relative  group">
-                    <Image
-                      className="h-[296px] rounded-lg object-cover w-full "
-                      src={productPic}
-                      height={296}
-                      width={413}
-                      alt="product"
-                    />
-                    <ProductHoverEffect />
-                  </div>
+                <div className="pt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                  {allProducts?.data?.map((item) => (
+                    <div key={item?.id} className="relative  group">
+                      <Image
+                        className="h-[296px] rounded-lg object-cover w-full "
+                        src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
+                        height={296}
+                        width={413}
+                        alt="product"
+                      />
+                      <ProductHoverEffect item={item} />
+                    </div>
+                  ))}
                 </div>
 
                 <div className="flex justify-center py-16">

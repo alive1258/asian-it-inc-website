@@ -19,16 +19,16 @@ const SwiperTestimonial = ({ testimonials }) => {
     <>
       <div>
         {/* Testimonials  */}
-        <div>
+        <div className=" w-full">
           <div className="flex space-x-4 mb-4 md:justify-between justify-end relative md:top-[17vh] z-[500] pr-7 md:pt-0 pt-6">
             <div className="custom-prev-button ">
-              <IoIosArrowBack className="text-white hover:bg-gradient-to-l bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded-full md:size-10 size-8 p-1 cursor-pointer z-[500]" />
+              <IoIosArrowBack className="text-white hover:bg-[#A26AFF] bg-[#BFC1FD] rounded-full md:size-10 size-8 p-1 cursor-pointer z-[500] duration-300" />
             </div>
             <div className="custom-next-button">
-              <IoIosArrowForward className="text-white hover:bg-gradient-to-l bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded-full md:size-10 size-8 p-1 cursor-pointer z-[500]" />
+              <IoIosArrowForward className="text-white hover:bg-[#A26AFF] bg-[#BFC1FD] rounded-full md:size-10 size-8 p-1 cursor-pointer z-[500] duration-300" />
             </div>
           </div>
-          <div className="px-4">
+          <div className=" md:px-14">
             <Swiper
               // install Swiper modules
               slidesPerView={1}
@@ -58,7 +58,7 @@ const SwiperTestimonial = ({ testimonials }) => {
               className="mySwiper"
             >
               {/* testimonial 1 */}
-              {testimonials?.data?.map((testimonial) => (
+              {testimonials?.map((testimonial) => (
                 <SwiperSlide key={testimonial?._id}>
                   <TestimonialCard testimonial={testimonial} />
                 </SwiperSlide>

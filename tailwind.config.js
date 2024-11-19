@@ -16,6 +16,9 @@ module.exports = {
         secondary: {
           base: `var(--color-secondary-base)`,
         },
+        tertiary: {
+          base: `var(--color-tertiary-base)`,
+        },
         info: {
           base: `var(--color-info-base)`,
           muted: `var(--color-info-muted)`,
@@ -33,6 +36,13 @@ module.exports = {
           base: `var(--color-neutral-base)`,
           muted: `var(--color-neutral-muted)`,
         },
+        green: {
+          base: `var(--color-green-base)`,
+        },
+        gray: {
+          base: `var(--color-gray-base)`,
+          // muted: `var(--color-gray-muted)`,
+        },
         black: {
           base: `var(--color-black-base)`,
           solid: `var(--color-black-solid)`,
@@ -49,6 +59,9 @@ module.exports = {
           base: `var(--color-secondary-base)`,
           muted: `var(--color-info-muted)`,
         },
+        tertiary: {
+          base: `var(--color-tertiary-base)`,
+        },
         info: {
           base: `var(--color-info-base)`,
         },
@@ -60,6 +73,9 @@ module.exports = {
         },
         success: {
           base: `var(--color-success-base)`,
+        },
+        green: {
+          base: `var(--color-green-base)`,
         },
         neutral: {
           base: `var(--color-neutral-base)`,
@@ -80,6 +96,9 @@ module.exports = {
         secondary: {
           base: `var(--color-secondary-base)`,
         },
+        tertiary: {
+          base: `var(--color-tertiary-base)`,
+        },
         info: {
           base: `var(--color-info-base)`,
           muted: `var(--color-info-muted)`,
@@ -92,6 +111,9 @@ module.exports = {
         },
         success: {
           base: `var(--color-success-base)`,
+        },
+        green: {
+          base: `var(--color-green-base)`,
         },
         neutral: {
           base: `var(--color-neutral-base)`,

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
-const ProductHoverEffect = ({ ourWorkDetail }) => {
+const ProductHoverEffect = ({ item }) => {
   //   const techArray = ourWorkDetail?.tech
   //     ?.split(", ")
   //     .slice(0, 3)
@@ -18,11 +18,11 @@ const ProductHoverEffect = ({ ourWorkDetail }) => {
       >
         <div className="flex flex-col justify-end mt-auto">
           <div>
-            <h1 className="text-white text-2xl font-semibold">
+            <h1 className="text-white text-2xl capitalize font-semibold">
               {/* {ourWorkDetail?.type} */}
-              CRIPTO SWAP
+              {item?.name}
             </h1>
-            <p className="text-white">Mobile Application</p>
+            <p className="text-white"> {item?.productTopCategory?.name} Application</p>
             {/* <p className="text-white">{ourWorkDetail?.title}</p> */}
             <div className="flex items-center gap-4 text-white mt-[18px]">
               {/* {techArray?.map((tech, index) => (

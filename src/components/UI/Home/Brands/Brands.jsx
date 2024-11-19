@@ -1,10 +1,19 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
-const Brands = () => {
+const Brands = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/brands`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+  const brandsData = data?.data || [];
   return (
     <>
       <div>
@@ -22,7 +31,7 @@ const Brands = () => {
               }}
             >
               <h1 className="text-[40px] font-semibold text-center">
-                Trusted by 100+ Brands
+                Trusted by {brandsData?.length} + Brands
               </h1>
             </div>
           </div>
@@ -41,22 +50,17 @@ const Brands = () => {
                 {/* {clients?.data?.map((client, index) => (
               <ClientBox client={client} key={index} />
             ))} */}
-                <div className="size-[100px] p-2 my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center">
-                  <Image
-                    className="flex w-full h-full"
-                    src={asianItIncLogo}
-                    width={200}
-                    height={200}
-                    alt="client_image"
-                  />
-                  <div className="size-[100px]  my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center">
+                <div className="size-[100px] p-2 my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center gap-10">
+                  {brandsData?.map((item, index) => (
                     <Image
-                      src={asianItIncLogo}
-                      width={145}
-                      height={48}
-                      alt="client icon"
+                      key={index}
+                      className="flex w-full h-full"
+                      src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
+                      width={150}
+                      height={150}
+                      alt="client_image"
                     />
-                  </div>
+                  ))}
                 </div>
               </Marquee>
 
@@ -72,22 +76,17 @@ const Brands = () => {
                 {/* {clients?.data?.map((client, index) => (
               <ClientBox client={client} key={index} />
             ))} */}
-                <div className="size-[100px] p-2  my-2.5   border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center">
-                  <Image
-                    className="flex w-full h-full"
-                    src={asianItIncLogo}
-                    width={200}
-                    height={200}
-                    alt="client_image"
-                  />
-                  <div className="size-[100px]  my-2.5   border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center">
+                <div className="size-[100px] p-2 my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center gap-10">
+                  {brandsData?.map((item, index) => (
                     <Image
-                      src={asianItIncLogo}
-                      width={145}
-                      height={48}
-                      alt="client icon"
+                      key={index}
+                      className="flex w-full h-full"
+                      src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
+                      width={150}
+                      height={150}
+                      alt="client_image"
                     />
-                  </div>
+                  ))}
                 </div>
               </Marquee>
 
@@ -101,25 +100,17 @@ const Brands = () => {
                   play={true}
                   direction="right"
                 >
-                  {/* {clients?.data?.map((client, index) => (
-              <ClientBox client={client} key={index} />
-            ))} */}
-                  <div className="size-[100px] p-2 my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center">
-                    <Image
-                      className="flex w-full h-full"
-                      src={asianItIncLogo}
-                      width={200}
-                      height={200}
-                      alt="client_image"
-                    />
-                    <div className="size-[100px]  my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center">
+                  <div className="size-[100px] p-2 my-2.5  border border-transparent hover:border-primary-base cursor-pointer duration-300 flex justify-center items-center gap-10">
+                    {brandsData?.map((item, index) => (
                       <Image
-                        src={asianItIncLogo}
-                        width={145}
-                        height={48}
-                        alt="client icon"
+                        key={index}
+                        className="flex w-full h-full"
+                        src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
+                        width={100}
+                        height={100}
+                        alt="client_image"
                       />
-                    </div>
+                    ))}
                   </div>
                 </Marquee>
               </div>

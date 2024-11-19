@@ -1,8 +1,18 @@
 import Link from "next/link";
 import React from "react";
 import Button from "../../Button/Button";
+import WorksCard from "./WorksCard";
 
-const OurWorks = () => {
+const OurWorks = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-works`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await res.json();
+  const ourWorksData = data?.data || [];
   return (
     <>
       <div className="bg-[#000] py-16">
@@ -21,16 +31,20 @@ const OurWorks = () => {
                 Our Works
               </p>
               <h1 className="text-[40px] pt-2 font-normal ">Case studies</h1>
-              <p className="text-[20px] pt-2 font-normal  w-[490px]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt dolore.
+              <p className=" text-sm text-gray-base pt-2 font-normal  w-[490px]">
+                Lorem ipsum dolor sit amet consectetur. In non tortor erat
+                lectus in amet tellus tincidunt. Sem feugiat semper fringilla
+                ante molestie amet faucibus. Pulvinar turpis hac mi augue etiam.
+                Id erat id imperdiet posuere senectus purus.
               </p>
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-8 pt-16">
-            <div className="lg:col-span-3 bg-red-400 text-white">pic</div>
-            <div className="lg:col-span-2 bg-blue-500 text-white">pic</div>
+          <div className="md:mt-28 mt-12 space-y-6">
+            {/* <AllWork ourWorkDetails={ourWorksData} /> */}
+            {ourWorksData?.map((item, index) => (
+              <WorksCard item={item} key={index} index={index} />
+            ))}
           </div>
           <div className="pt-16 w-44 mx-auto">
             <Link href="/all-cases">
