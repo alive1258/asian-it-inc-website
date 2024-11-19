@@ -23,8 +23,8 @@ const Navbar = () => {
   const items = [
     { display: "Home", path: "/" },
     { display: "About Us", path: "/about-us" },
-    { display: "Services", path: "/services" },
-    { display: "Products", path: "/products" },
+    { display: "Services", path: "/our-services" },
+    { display: "Products", path: "/our-products" },
     { display: "Pricing", path: "/pricing" },
     { display: "Our Works", path: "/our-works" },
     { display: "Career", path: "/career" },
@@ -91,40 +91,40 @@ const Navbar = () => {
             const isActive = pathName === path;
             const isActiveAbout = pathName === "/about-us";
             return (
-              // <Link
-              //   onClick={topFunction}
-              //   key={display}
-              //   className={`md:ml-6 font-normal duration-300  ${
-              //     isActive
-              //       ? `font-semibold  ${
-              //           isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
-              //         }`
-              //       : `${isScrolled ? "md:text-gray-900" : "md:text-white"}`
-              //   }`}
-              //   href={path}
-              // >
-              //   {display}
-              // </Link>
               <Link
                 onClick={topFunction}
                 key={display}
-                className={`md:ml-6 font-normal duration-300 ${
+                className={`md:ml-6 font-normal duration-300  ${
                   isActive
-                    ? `font-semibold ${
+                    ? `font-semibold  ${
                         isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
                       }`
-                    : `${
-                        isActiveAbout
-                          ? "text-gray-900" // Always apply text-gray-900 for About Us
-                          : isScrolled
-                          ? "md:text-gray-900"
-                          : "md:text-white"
-                      }`
+                    : `${isScrolled ? "md:text-gray-900" : "md:text-white"}`
                 }`}
                 href={path}
               >
                 {display}
               </Link>
+              // <Link
+              //   onClick={topFunction}
+              //   key={display}
+              //   className={`md:ml-6 font-normal duration-300 ${
+              //     isActive
+              //       ? `font-semibold ${
+              //           isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
+              //         }`
+              //       : `${
+              //           isActiveAbout
+              //             ? "text-gray-900" // Always apply text-gray-900 for About Us
+              //             : isScrolled
+              //             ? "md:text-gray-900"
+              //             : "md:text-white"
+              //         }`
+              //   }`}
+              //   href={path}
+              // >
+              //   {display}
+              // </Link>
             );
           })}
 

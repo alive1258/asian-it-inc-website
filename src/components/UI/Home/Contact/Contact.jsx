@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <>
       <div className="bg-[#E4E5FE]">
-        <div className="bg-[url('/assets/images/conatctBg.png')] bg-cover bg-no-repeat pb-16">
+        <div className="bg-[url('/assets/images/conatctBg.png')]  bg-cover bg-no-repeat pb-16">
           <div className="container">
             <div className="flex justify-center pt-14 ">
               <div>

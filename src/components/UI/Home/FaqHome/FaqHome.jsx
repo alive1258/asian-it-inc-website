@@ -25,10 +25,6 @@ const FaqHome = () => {
               </p>
             </div>
           </div>
-          <div>
-            {/* <BlogSection blogs={blogs} /> */}
-            <div className="mt-16"></div>
-          </div>
         </div>
       </div>
     </>
