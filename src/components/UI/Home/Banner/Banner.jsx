@@ -7,7 +7,16 @@ import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
 import { FaStar } from "react-icons/fa";
 
-const Banner = () => {
+const Banner = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await res.json();
+  const bannersData = data?.data || [];
   return (
     <>
       <div className="bg-[url('/assets/images/bannerbg.png')] bg-cover bg-center bg-no-repeat h-screen">
@@ -23,14 +32,10 @@ const Banner = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Your Custom Software Development Company
+                {bannersData.name}
               </h1>
               <p className="pt-6 text-[#fff]">
-                With over 8 years of experience, ASIAN IT INC. specializes in
-                custom software development for clients worldwide. From the US
-                to Europe and Asia, we deliver exceptional custom software
-                development solutions to empower small and medium-sized
-                enterprises with tailored digital solutions.
+              {bannersData.description}
               </p>
               <div className="pt-20 flex items-center space-x-6">
                 <div>
