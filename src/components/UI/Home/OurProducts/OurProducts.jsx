@@ -3,15 +3,17 @@ import React from "react";
 import productPic from "../../../../../public/assets/images/product.png";
 import ProductHoverEffect from "./ProductHoverEffect";
 import Link from "next/link";
-import ButtonOutline from "../../Button/ButtonOutline";
 
 const OurProducts = () => {
   return (
     <>
       {/* <div className="bg-gradient-to-r from-black from-10% via-gray-950 via-15% to-gray-900 to-55% "> */}
       <div>
-        <div className="bg-gradient-to-r from-black to-gray-900">
+        <div className="relative bg-gradient-to-r from-black to-gray-900 overflow-hidden">
           <div className="bg-[url('/assets/images/productBg.png')] bg-cover bg-no-repeat ">
+            <div className="absolute z-[0] w-[593.727px] h-[531.226px] bg-[#E9C12F] rounded-[593.727px] -top-[345.17px] right-0 opacity-40 blur-[150px]" />
+            <div className="absolute z-[0] w-[699.729px] h-[626.07px] bg-[#5158DA] rounded-[699.729px] -bottom-[377.762px] left-[152.271px] opacity-40 blur-[125px]" />
+
             <div className="container text-white">
               <div className="flex justify-center pt-14 ">
                 <div>
@@ -43,7 +45,7 @@ const OurProducts = () => {
                   </ul>
                 </div>
 
-                <div className="pt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                <div className="pt-16 grid sm:grid-cols-3  gap-5">
                   <div className="relative  group">
                     <Image
                       className="h-[296px] rounded-lg object-cover w-full "

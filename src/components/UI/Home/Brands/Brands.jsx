@@ -8,9 +8,10 @@ const Brands = () => {
   return (
     <>
       <div>
-        {/* <div className="bg-[linear-gradient(to_right,_#6366f1_2%,_#0ea5e9_25%,_#ef4444_45%,_#facc15_70%,_#10b981_95%)]" > */}
-        {/* <div className="bg-gradient-to-r from-indigo-500 from-2% via-sky-500 via-25% via-red-500 via-25% via-yellow-500 via-45% to-emerald-500 to-95%"> */}
-        <div className="container">
+        <div className="absolute z-[0] w-[180px] flex-shrink-0 h-[180px] bg-[#75FF03]  opacity-40 blur-[150px]" />
+        <div className="absolute z-[0] w-[180px] flex-shrink-0 h-[180px] top-0 -left-[200px] bg-[#FFC903]  opacity-40 blur-[150px]" />
+        <div className="absolute z-[0] w-[180px]  h-[180px] top-0 rounded-[330px]  right-0 bg-[#FF0303]  opacity-70 blur-[150px]" />
+        <div className="container relative overflow-hidden">
           <div className="flex justify-center py-14 ">
             <div
               style={{
