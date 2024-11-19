@@ -4,7 +4,6 @@ import Blogs from "@/components/UI/Home/Blogs/Blogs";
 import Brands from "@/components/UI/Home/Brands/Brands";
 import Contact from "@/components/UI/Home/Contact/Contact";
 import FaqHome from "@/components/UI/Home/FaqHome/FaqHome";
-import Hero from "@/components/UI/Home/Hero/Hero";
 import OurProducts from "@/components/UI/Home/OurProducts/OurProducts";
 import OurWorks from "@/components/UI/Home/OurWorks/OurWorks";
 import ServiceMarquee from "@/components/UI/Home/ServiceMarquee/ServiceMarquee";

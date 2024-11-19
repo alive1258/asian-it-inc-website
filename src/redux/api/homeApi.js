@@ -4,9 +4,16 @@ import { baseApi } from "./baseApi";
 export const homeApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     // Query for fetching all BlogCategory
-    getAllOurWorks: build.query({
+    getAllTopCategory: build.query({
       query: () => ({
-        url: `/our-works`,
+        url: `/product-top-category`,
+        method: "GET",
+      }),
+      providesTags: [tagTypes.home],
+    }),
+    getAllProducts: build.query({
+      query: (data) => ({
+        url: `/products/get-product-by-category?product-category-id=${data}`,
         method: "GET",
       }),
       providesTags: [tagTypes.home],
@@ -14,4 +21,4 @@ export const homeApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetAllOurWorksQuery } = homeApi;
+export const { useGetAllProductsQuery, useGetAllTopCategoryQuery } = homeApi;

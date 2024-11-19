@@ -47,12 +47,6 @@ instance.interceptors.response.use(
     // sent automatic request to get accessToken
     if (error?.response?.status === 403 && !config?.sent) {
       config.sent === true;
-      //   const response = await getNewAccessToken();
-      //   const accessToken = response?.data?.data?.accessToken;
-
-      //   //set token in headers
-      //   config.headers.Authorization = `Bearer ${accessToken}`;
-      //   setToLocalStorage(AUTH_KEY, accessToken);
       return instance(config);
     } else {
       // Any status codes that falls outside the range of 2xx causes this function to trigger

@@ -1,9 +1,19 @@
 import React from "react";
+import SwiperTestimonial from "./SwiperTestimonial";
 // import SwiperTestimonial from "./SwiperTestimonial";
 
-const Testimonials = () => {
+const Testimonials = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/testimonial`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await res.json();
+  const testimonialsData = data?.data || [];
   return (
-    <>
+    <div className="bg-[#F8F3FF]">
       <div className="container">
         <div className="flex justify-center pt-14 ">
           <div>
@@ -28,11 +38,11 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="mt-10">
-          {/* <SwiperTestimonial testimonials={testimonials} /> */}
+        <div className="py-10">
+          <SwiperTestimonial testimonials={testimonialsData} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

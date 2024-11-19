@@ -36,6 +36,9 @@ module.exports = {
           base: `var(--color-neutral-base)`,
           muted: `var(--color-neutral-muted)`,
         },
+        green: {
+          base: `var(--color-green-base)`,
+        },
         gray: {
           base: `var(--color-gray-base)`,
           // muted: `var(--color-gray-muted)`,
@@ -71,6 +74,9 @@ module.exports = {
         success: {
           base: `var(--color-success-base)`,
         },
+        green: {
+          base: `var(--color-green-base)`,
+        },
         neutral: {
           base: `var(--color-neutral-base)`,
           muted: `var(--color-neutral-muted)`,
@@ -105,6 +111,9 @@ module.exports = {
         },
         success: {
           base: `var(--color-success-base)`,
+        },
+        green: {
+          base: `var(--color-green-base)`,
         },
         neutral: {
           base: `var(--color-neutral-base)`,

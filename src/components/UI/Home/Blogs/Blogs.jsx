@@ -12,7 +12,6 @@ const Blogs = async () => {
   }
   const data = await res.json();
   const blogsData = data?.data || [];
-  console.log(blogsData, "blogsDatablogsDatablogsData")
   return (
     <>
       <div className="bg-[#E4E5FE]">
@@ -20,8 +19,8 @@ const Blogs = async () => {
           <div className="container">
             <div className="flex justify-center pt-14 ">
               <div>
-                <p className="text-[20px] pt-2 font-normal text-center">
-                  our Blog
+                <p className="text-[20px] uppercase pt-2 font-normal text-center">
+                  Our Blog
                 </p>
                 <h1
                   className="text-[40px] font-semibold text-center"
@@ -42,7 +41,7 @@ const Blogs = async () => {
             </div>
             <div>
               <BlogSection blogs={blogsData} />
-              <div className="mt-16">
+              <div className="mt-8">
                 <Link href="/blogs">
                   <ButtonOutline content="More Blogs" />
                 </Link>
