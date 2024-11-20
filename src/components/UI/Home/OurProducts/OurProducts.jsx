@@ -84,7 +84,7 @@ const OurProducts = () => {
                 </div>
 
                 <div className="flex justify-center py-16">
-                  <Link href="/products">
+                  <Link href="/our-products">
                     <button className="outline-btn">View More Products</button>
                   </Link>
                 </div>

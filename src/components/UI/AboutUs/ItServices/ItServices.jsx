@@ -1,6 +1,6 @@
 import ServiceDetails from "./ServiceDetails";
 
-const ItServices = async () => {
+const ItServices = async ({ aboutData }) => {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/professional-services`,
@@ -10,14 +10,11 @@ const ItServices = async () => {
         },
       }
     );
-    const professionalServices = await res.json();
     return (
       <>
-        <div className="bg-[#F4EDF7]/50 py-14">
+        <div className="bg-[#17181A]  py-14">
           <div className="container md:flex items-center gap-5">
-            {professionalServices?.data?.slice(0, 1).map((service) => (
-              <ServiceDetails key={service?._id} service={service} />
-            ))}
+            <ServiceDetails aboutData={aboutData} />
           </div>
         </div>
       </>

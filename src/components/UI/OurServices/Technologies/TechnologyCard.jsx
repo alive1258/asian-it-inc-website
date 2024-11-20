@@ -20,17 +20,17 @@ const TechnologyCard = ({ item }) => {
         viewport={{ once: false }}
         className="skillsBg"
       >
-        <div className="">
-          <div className="flex justify-center items-center">
+        <div className=" bg-[#EFEFFE] h-[140px] w-[142px] border border-[#CCCDFD] rounded-lg ">
+          <div className="p-4">
             <Image
-              className="rounded-lg "
-              src={item?.image}
-              height={60}
-              width={60}
-              alt="JavascriptImg"
+              className="rounded-lg mx-auto w-[50px] h-[50px] "
+              src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
+              height={48}
+              width={48}
+              alt={item?.name}
             />
           </div>
-          <p className="pt-3 text-center text-xl">{item?.name}</p>
+          <p className="text-center capitalize text-lg">{item?.name}</p>
         </div>
       </motion.div>
     </>

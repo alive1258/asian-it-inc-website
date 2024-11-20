@@ -1,10 +1,10 @@
 import ProductsDetailsSection from "@/components/UI/Home/OurProducts/ProductsDetailsSection";
 import React from "react";
 
-const page = () => {
+const page = ({params}) => {
   return (
     <div>
-      <ProductsDetailsSection />
+      <ProductsDetailsSection id={params.id} />
     </div>
   );
 };
