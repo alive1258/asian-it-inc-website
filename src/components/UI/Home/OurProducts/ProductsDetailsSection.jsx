@@ -1,7 +1,11 @@
 import React from "react";
 
 const ProductsDetailsSection = () => {
-  return <div>ProductsDetailsSection</div>;
+  return <div>
+
+ 
+
+  </div>;
 };
 
 export default ProductsDetailsSection;

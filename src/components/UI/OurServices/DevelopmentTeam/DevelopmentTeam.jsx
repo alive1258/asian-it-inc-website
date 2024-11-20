@@ -2,30 +2,38 @@ import Image from "next/image";
 import React from "react";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
-const DevelopmentTeam = () => {
+const DevelopmentTeam = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/capabilities`, {
+    next: {
+      revalidate: 30,
+    },
+  });
+  const data = await res.json();
+  const capabilities = data?.data || [];
   return (
     <>
-      <div className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-950 ">
+      <div className="">
         <div className="container py-16">
-          <h1 className="text-[40px] flex justify-center text-[#fff]">
+          <h1 className="text-[25px]  md:text-[40px] flex justify-center text-[#fff]">
             Our Development Team Capabilities
           </h1>
           <div className="pt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12">
-            <div>
-              <div className="flex justify-center items-center">
-                <Image
-                  className="md:size-12  border-[#7579FA] border-2  size-9 rounded-full"
-                  src={asianItIncLogo}
-                  height={28}
-                  width={151}
-                  alt="logo"
-                />
+            {capabilities?.map((item) => (
+              <div key={item.id}>
+                <div className="space-y-8">
+                  <Image
+                    className=" w-[80px] h-[80px] mx-auto "
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
+                    height={80}
+                    width={80}
+                    alt="logo"
+                  />
+                  <p className=" text-sm md:text-base text-center text-white">
+                    {item.name}
+                  </p>
+                </div>
               </div>
-              <p className="pt-8">
-                Enhancing User Experience through Professional Front End
-                Development{" "}
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

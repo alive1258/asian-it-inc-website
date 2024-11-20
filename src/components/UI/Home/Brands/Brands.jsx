@@ -55,6 +55,7 @@ const Brands = async () => {
                     <Image
                       key={index}
                       className="flex w-full h-full"
+                      layout="responsive"
                       src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                       width={150}
                       height={150}
@@ -80,6 +81,7 @@ const Brands = async () => {
                   {brandsData?.map((item, index) => (
                     <Image
                       key={index}
+                       layout="responsive"
                       className="flex w-full h-full"
                       src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                       width={150}
@@ -104,6 +106,7 @@ const Brands = async () => {
                     {brandsData?.map((item, index) => (
                       <Image
                         key={index}
+                         layout="responsive"
                         className="flex w-full h-full"
                         src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                         width={100}

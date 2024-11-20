@@ -14,7 +14,7 @@ const Testimonials = async () => {
   const testimonialsData = data?.data || [];
   return (
     <div className="bg-[#F8F3FF]">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="flex justify-center pt-14 ">
           <div>
             <p className="text-[20px] pt-2 font-normal text-center">

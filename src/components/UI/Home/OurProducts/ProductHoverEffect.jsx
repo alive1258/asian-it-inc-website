@@ -22,7 +22,10 @@ const ProductHoverEffect = ({ item }) => {
               {/* {ourWorkDetail?.type} */}
               {item?.name}
             </h1>
-            <p className="text-white"> {item?.productTopCategory?.name} Application</p>
+            <p className="text-white">
+              {" "}
+              {item?.productTopCategory?.name} Application
+            </p>
             {/* <p className="text-white">{ourWorkDetail?.title}</p> */}
             <div className="flex items-center gap-4 text-white mt-[18px]">
               {/* {techArray?.map((tech, index) => (
@@ -33,7 +36,7 @@ const ProductHoverEffect = ({ item }) => {
               #React, #Next, #TS, #Mongoose
             </div>
             <div className="pt-2">
-              <Link href={`/details`}>
+              <Link href={`/our-products/${item?.id}`}>
                 <p className="underline text-[#7579FA] text-[16px] font-medium">
                   Check Full Details
                 </p>

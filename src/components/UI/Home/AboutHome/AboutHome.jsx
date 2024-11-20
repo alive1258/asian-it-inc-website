@@ -6,17 +6,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button/Button";
 const AboutHome = async () => {
-
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/aboutssss`,
-    {
-      next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-    }
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
+  const data = await res.json();
+  const aboutData = data?.data || [];
+
   return (
     <>
       <div className="relative bg-[#EFEFFE] ">
@@ -42,14 +41,14 @@ const AboutHome = async () => {
                   </span>
                 </h2>
                 <h1 className="text-[32px] pt-4 font-semibold">
-                  We design, develop, implement and support{" "}
-                  <span className="text-[#5A5FF9]">IT Systems</span>
+                  {aboutData?.name?.split(" ").slice(0, -2).join(" ")}{" "}
+                  <span className="text-[#5A5FF9]">
+                    {aboutData?.name?.split(" ").slice(-2).join(" ")}
+                  </span>
                 </h1>
+
                 <p className="pt-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat aute irure dolor in reprehenderit velit.
+                  {aboutData?.description}
                 </p>
 
                 {/* Cards section */}
@@ -67,7 +66,7 @@ const AboutHome = async () => {
                         />
                         <div>
                           <h3 className="text-[32px] font-semibold">110+</h3>
-                          <p className="text-[16px]">Project</p>
+                          <p className="text-[16px]">{aboutData?.project}</p>
                         </div>
                       </div>
                     </div>

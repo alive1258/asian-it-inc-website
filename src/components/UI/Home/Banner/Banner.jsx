@@ -6,16 +6,42 @@ import Image from "next/image";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
 import { FaStar } from "react-icons/fa";
+import OurTechnology from "./OurTechnology";
 
-const Banner = () => {
+const Banner = async () => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`, {
+    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const resTechnologies = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/technologies`,
+    {
+      next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
+    }
+  );
+
+  if (!resTechnologies.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await res.json();
+  const technologiesData = await resTechnologies.json();
+  const bannersData = data?.data || [];
   return (
     <>
       <div className="bg-[url('/assets/images/bannerbg.png')] bg-cover bg-center bg-no-repeat h-screen">
         <div className="md:pt-32 pt-28 md:flex items-center ">
           <div className="container  relative md:flex  justify-between md:gap-10">
             <div>
+              <h2 className=" text-white  text-base md:text-lg  capitalize">
+                {" "}
+                {bannersData.name}
+              </h2>
               <h1
-                className="text-[54px] font-semibold"
+                className=" text-[25px] md:text-[35px] lg:text-[45px] font-semibold"
                 style={{
                   background:
                     "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
@@ -23,15 +49,9 @@ const Banner = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Your Custom Software Development Company
+                {bannersData.title}
               </h1>
-              <p className="pt-6 text-[#fff]">
-                With over 8 years of experience, ASIAN IT INC. specializes in
-                custom software development for clients worldwide. From the US
-                to Europe and Asia, we deliver exceptional custom software
-                development solutions to empower small and medium-sized
-                enterprises with tailored digital solutions.
-              </p>
+              <p className="pt-6 text-[#fff]">{bannersData.description}</p>
               <div className="pt-20 flex items-center space-x-6">
                 <div>
                   <Link href="/case studies">
@@ -86,14 +106,8 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-            <div>
-              <p className="text-[#fff]">
-                With over 8 years of experience, ASIAN IT INC. specializes in
-                custom software development for clients worldwide. From the US
-                to Europe and Asia, we deliver exceptional custom software
-                development solutions to empower small and medium-sized
-                enterprises with tailored digital solutions.
-              </p>
+            <div className="md:pt-0 pt-20 md:pl-0 pl-7">
+              <OurTechnology ourTechnologies={technologiesData} />
             </div>
           </div>
         </div>
