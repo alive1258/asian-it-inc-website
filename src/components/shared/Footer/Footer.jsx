@@ -26,7 +26,7 @@ const Footer = () => {
                     alt="logo"
                   />
                   <h3 className="md:text-2xl text-lg font-semibold text-gradient">
-                    EthenSoft
+                   ASIAN IT INC
                   </h3>
                 </div>
               </Link>
@@ -62,12 +62,9 @@ const Footer = () => {
             <div className="md:pl-7">
               <div>
                 <h1 className="text-primary-muted text-lg font-semibold pb-4">
-                  Popular Links
+                  Our Services
                 </h1>
                 <ul className="space-y-2 text-primary-muted list-disc list-inside text-sm md:text-base marker:text-primary-muted">
-                  <li>
-                    <Link href="/about-us">About Us</Link>
-                  </li>
                   <li>
                     <Link href="/contact-us">Contact Us</Link>
                   </li>
@@ -81,9 +78,6 @@ const Footer = () => {
                     <Link href="/our-work">Our Work</Link>
                   </li>
                   <li>
-                    <Link href="/clients">Clients</Link>
-                  </li>
-                  <li>
                     <Link href="/team">Team</Link>
                   </li>
                 </ul>
@@ -94,9 +88,22 @@ const Footer = () => {
             <div className=" ">
               <div>
                 <h1 className="text-primary-muted text-lg font-semibold pb-4">
-                  Our Services
+                  Quick Links
                 </h1>
-                {/* <FooterOurService /> */}
+                <ul className="space-y-2 text-primary-muted list-disc list-inside text-sm md:text-base marker:text-primary-muted">
+                  <li>
+                    <Link href="/about-us">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/our-team">Our team</Link>
+                  </li>
+                  <li>
+                    <Link href="/terms-condition">Terms condition</Link>
+                  </li>
+                  <li>
+                    <Link href="/privacy-policy">Privacy policy</Link>
+                  </li>
+                </ul>
               </div>
             </div>
 

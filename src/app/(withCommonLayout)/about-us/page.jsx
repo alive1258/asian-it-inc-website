@@ -7,11 +7,6 @@ import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
 import Brands from "@/components/UI/Home/Brands/Brands";
 import ImageGallery from "@/components/UI/AboutUs/ImageGallery/ImageGallery";
 import ItServices from "@/components/UI/AboutUs/ItServices/ItServices";
-// import Contact from "@/components/UI/Home/Contact/Contact";
-// import Brands from "@/components/UI/Home/Brands/Brands";
-// import FaqHome from "@/components/UI/Home/FaqHome/FaqHome";
-// import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
-
 const page = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`, {
     next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)

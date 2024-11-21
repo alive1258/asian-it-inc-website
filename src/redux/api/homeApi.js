@@ -34,6 +34,14 @@ export const homeApi = baseApi.injectEndpoints({
       }),
       providesTags: [tagTypes.home],
     }),
+
+    getServiceData: build.query({
+      query: (data) => ({
+        url: `/services`,
+        method: "GET",
+      }),
+      providesTags: [tagTypes.home],
+    }),
   }),
 });
 
@@ -41,5 +49,7 @@ export const {
   useGetAllProductsQuery,
   useGetAllTopCategoryQuery,
   useCreateContactUsMutation,
-  useGetSinglePageHereBannerDataQuery
+  useGetSinglePageHereBannerDataQuery,
+  useGetServiceDataQuery,
+
 } = homeApi;
