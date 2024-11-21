@@ -3,7 +3,7 @@ import BlogDetails from "../../BlogDetails/BlogDetails";
 const BlogDetailsPage = async ({ params }) => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/products/${params?.slug}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/blogs/${params?.slug}`,
       {
         next: {
           revalidate: 30,
@@ -19,7 +19,7 @@ const BlogDetailsPage = async ({ params }) => {
 
     return (
       <>
-        <BlogDetails products={blogs?.data} />
+        <BlogDetails blogsData={productData?.data} />
       </>
     );
   } catch {

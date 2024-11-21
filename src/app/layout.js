@@ -23,6 +23,9 @@ export const metadata = {
     "Mobile app development",
     "WordPress themes",
   ],
+  icons: {
+    icon: `https://i.ibb.co.com/w7HRw2Q/logo.webp`, 
+  },
   description:
     "Asian It Inc provides custom web and mobile app solutions for businesses.",
   openGraph: {
@@ -32,7 +35,7 @@ export const metadata = {
     description: "Custom Web and mobile app solutions tailored for businesses.",
     images: [
       {
-        url: "https://www.asianitinc.com/images/1",
+        url: "https://i.ibb.co.com/w7HRw2Q/logo.webp",
         width: 800,
         height: 600,
         alt: "Asian It Inc Logo",

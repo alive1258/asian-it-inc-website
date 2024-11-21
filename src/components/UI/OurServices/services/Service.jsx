@@ -12,7 +12,7 @@ const Service = () => {
       <div className="bg-[#040408]">
         <div className="bg-[url('/assets/images/industryBg.png')] bg-cover bg-no-repeat">
           <div className=" container mx-auto py-8">
-            <div className=" grid grid-cols-2 md:gap-10">
+            <div className=" grid  grid-cols-1 lg:grid-cols-2 md:gap-10">
               <div>
                 <h4
                   className="text-[20px] font-semibold leading-normal "

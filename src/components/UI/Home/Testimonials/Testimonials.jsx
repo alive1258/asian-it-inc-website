@@ -1,5 +1,6 @@
 import React from "react";
 import SwiperTestimonial from "./SwiperTestimonial";
+import TitleSection from "../titleSection/TitleSection";
 // import SwiperTestimonial from "./SwiperTestimonial";
 
 const Testimonials = async () => {
@@ -15,29 +16,15 @@ const Testimonials = async () => {
   return (
     <div className="bg-[#F8F3FF]">
       <div className="container mx-auto">
-        <div className="flex justify-center pt-14 ">
-          <div>
-            <p className="text-[20px] pt-2 font-normal text-center">
-              TESTIMONIALS
-            </p>
-            <h1
-              className="text-[40px] font-semibold text-center"
-              style={{
-                background:
-                  "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              What clients say
-            </h1>
-            <p className="text-[20px] pt-2 font-normal text-center w-[490px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt dolore.
-            </p>
-          </div>
+        <div className="pt-14">
+          <TitleSection
+            color={true}
+            name={"FAQS"}
+            description={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt dolore.`}
+            title={"  What clients say"}
+          />
         </div>
-
         <div className="py-10">
           <SwiperTestimonial testimonials={testimonialsData} />
         </div>

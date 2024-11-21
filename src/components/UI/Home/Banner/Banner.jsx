@@ -32,26 +32,30 @@ const Banner = async () => {
   const bannersData = data?.data || [];
   return (
     <>
-      <div className="bg-[url('/assets/images/bannerbg.png')] bg-cover bg-center bg-no-repeat h-screen">
+      <div className="bg-[url('/assets/images/bannerbg.png')] bg-cover bg-center bg-no-repeat  pb-[72px] pt-14">
         <div className="md:pt-32 pt-28 md:flex items-center ">
-          <div className="container  relative md:flex  justify-between md:gap-10">
+          <div className="container  relative md:flex  justify-between gap-8 md:gap-[71px]">
             <div>
-              <h2 className=" text-white  text-base md:text-lg  capitalize">
-                {" "}
-                {bannersData.name}
-              </h2>
-              <h1
-                className=" text-[25px] md:text-[35px] lg:text-[45px] font-semibold"
-                style={{
-                  background:
-                    "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                {bannersData.title}
-              </h1>
-              <p className="pt-6 text-[#fff]">{bannersData.description}</p>
+              <div className=" space-5">
+                <h2 className=" text-white  text-base md:text-lg  capitalize">
+                  {" "}
+                  {bannersData.name}
+                </h2>
+                <h1
+                  className="text-[25px] md:text-[35px] lg:text-[45px] leading-normal font-semibold"
+                  style={{
+                    background:
+                      "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  {bannersData.title}
+                </h1>
+                <p className="pt-6 text-sm md:text-base text-[#fff]">
+                  {bannersData.description}
+                </p>
+              </div>
               <div className="pt-20 flex items-center space-x-6">
                 <div>
                   <Link href="/case studies">

@@ -6,7 +6,7 @@ import { Collapse } from "react-collapse";
 const ServiceCard = ({ setActiveService, activeService, index, item }) => {
   return (
     <div className="text-white">
-      <div class="bg-black text-white border-b border-[#323438] p-8 space-y-8">
+      <div class="bg-black text-white border-b border-[#323438] py-8 md:p-8 space-y-8">
         <div class="flex items-start space-x-6">
           <div className="relative w-[51px] h-[58px]">
             <svg

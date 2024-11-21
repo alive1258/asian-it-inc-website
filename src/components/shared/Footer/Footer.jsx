@@ -26,7 +26,7 @@ const Footer = () => {
                     alt="logo"
                   />
                   <h3 className="md:text-2xl text-lg font-semibold text-gradient">
-                   ASIAN IT INC
+                    ASIAN IT INC
                   </h3>
                 </div>
               </Link>
@@ -42,19 +42,19 @@ const Footer = () => {
                   href="https://www.facebook.com/profile.php?id=61562726343346"
                   target="_blank"
                 >
-                  <BsFacebook className="social-icons hover:bg-[#3b5998] text-[#3b5998]" />
+                  <BsFacebook className="social-icons hover:bg-[#5A5FF9] text-[#5A5FF9] hover:text-white duration-150 bg-white" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/ethen-soft/about/?viewAsMember=true"
                   target="_blank"
                 >
-                  <FaLinkedin className="social-icons hover:bg-[#0A66C2] text-[#0A66C2]" />
+                  <FaLinkedin className="social-icons hover:bg-[#5A5FF9] text-[#5A5FF9] hover:text-white duration-150 bg-white" />
                 </a>
                 <a
                   href="https://x.com/EthenSoft?fbclid=IwZXh0bgNhZW0CMTAAAR0t8rfRbeXgm5_8S060kghWEk_PHGc7UWKmQ67ECQsZkEJVw55xt2h5tgU_aem_MYkBOm5VjCMXThOKu09RLA"
                   target="_blank"
                 >
-                  <FaXTwitter className="social-icons hover:bg-[#14171A] text-[#14171A]" />
+                  <FaXTwitter className="social-icons hover:bg-[#5A5FF9] text-[#5A5FF9] hover:text-white duration-150 bg-white" />
                 </a>
               </div>
             </div>
@@ -93,6 +93,9 @@ const Footer = () => {
                 <ul className="space-y-2 text-primary-muted list-disc list-inside text-sm md:text-base marker:text-primary-muted">
                   <li>
                     <Link href="/about-us">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/blogs">Latest blogs</Link>
                   </li>
                   <li>
                     <Link href="/our-team">Our team</Link>

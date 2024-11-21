@@ -1,5 +1,14 @@
 import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 
+export async function generateMetadata() {
+  return {
+    title: `terms and condition | Asian it inc`,
+    description:
+    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+  };
+}
+
+
 const PrivacyPage = async () => {
   try {
     const res = await fetch(

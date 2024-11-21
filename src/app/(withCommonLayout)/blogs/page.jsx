@@ -1,18 +1,17 @@
-import Image from "next/image";
-import blogBanner from "../../../../public/assets/images/aboutBanner.png";
 import Blogs from "@/components/UI/Home/Blogs/Blogs";
-
+import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
+export async function generateMetadata() {
+  return {
+    title: `Blogs | Asian it inc`,
+    description:
+    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+  };
+}
 const page = () => {
   return (
     <>
       <div>
-        <Image
-          className="w-full md:h-[350px] h-[150px]"
-          src={blogBanner}
-          height={350}
-          width={900}
-          alt="blogBanner"
-        />
+        <HeroBanners/>
       </div>
       <Blogs />
     </>

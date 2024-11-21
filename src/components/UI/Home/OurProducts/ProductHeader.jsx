@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -7,14 +8,14 @@ const ProductHeader = ({ productData }) => {
       <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
         <div className="space-y-5 lg:col-span-2  md:space-y-10">
           <div>
-            <span class="inline-block px-7 py-[6px] text-sm font-medium text-[#6065FA] bg-[#E4E5FE] rounded-full">
-              {productData?.productTopCategory?.name}{" "}
+            <span class="inline-block px-7 capitalize py-[6px] text-sm font-medium text-[#6065FA] bg-[#E4E5FE] rounded-full">
+              {productData?.category}{" "}
             </span>
           </div>
 
           {/* <!-- Title --> */}
           <h1 class="text-4xl md:text-5xl font-bold text-black leading-snug">
-            Creative Multi-Purpose <br /> Next.js Project
+            {productData?.big_title}
           </h1>
 
           {/* <!-- Buttons --> */}
@@ -37,125 +38,50 @@ const ProductHeader = ({ productData }) => {
           {/* <!-- Info Section --> */}
           <div className="space-y-2">
             <h3 class="font-semibold capitalize text-lg md:text-[32px]">
-              Shopinganj
+              {productData?.name}
             </h3>
             <p class="text-[#1E232C] text-sm md:text-base">
-              Multiple Products Selling E-commerce site
+              {productData?.title}
             </p>
           </div>
           <div class="grid sm:grid-cols-2  gap-6 text-black">
-            <div className="space-y-2">
-              <h3 class="font-semibold capitalize text-lg md:text-[32px]">
-                Web Version
-              </h3>
-              <p class="text-[#1E232C] text-sm md:text-base">work Scope</p>
-            </div>
-            <div className="space-y-2">
-              <h3 class="font-semibold capitalize text-lg md:text-[32px]">
-                Mobile App
-              </h3>
-              <p class="text-[#1E232C] text-sm md:text-base">work Scope</p>
-            </div>
+            {productData?.web && (
+              <div className="space-y-2">
+                <h3 class="font-semibold capitalize text-lg md:text-[25px]">
+                  Web Version
+                </h3>
+                <p class="text-[#1E232C] text-sm md:text-base">work Scope</p>
+              </div>
+            )}
+
+            {productData?.app && (
+              <div className="space-y-2">
+                <h3 class="font-semibold capitalize text-lg md:text-[25px]">
+                  Mobile App
+                </h3>
+                <p class="text-[#1E232C] text-sm md:text-base">work Scope</p>
+              </div>
+            )}
           </div>
 
           {/* <!-- Technology Section --> */}
           <div>
-            <h3 class=" font-light text-lg md:text-[32px] text-[#1E232C]">
+            <h3 class=" font-light text-lg md:text-[25px] text-[#1E232C]">
               Technology
             </h3>
-            <div class="flex space-x-4 mt-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_281_4643)">
-                  <path
-                    d="M30.625 -0.000976562H9.375C4.19733 -0.000976562 0 4.19635 0 9.37402V30.624C0 35.8017 4.19733 39.999 9.375 39.999H30.625C35.8027 39.999 40 35.8017 40 30.624V9.37402C40 4.19635 35.8027 -0.000976562 30.625 -0.000976562Z"
-                    fill="#F0DB4F"
+            <div class="flex space-x-4 mt-4">
+              {productData?.assignedTechnologyData?.map((item, index) => (
+                <div key={index} className=" w-[50px] h-[50px]">
+                  <Image
+                    className="rounded  h-full w-full  object-contain"
+                    layout="responsive"
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.technologies?.photo}`}
+                    width={50}
+                    height={50}
+                    alt="blog"
                   />
-                  <path
-                    d="M10.5177 33.4254L13.5787 31.5729C14.1693 32.62 14.7065 33.5059 15.9951 33.5059C17.2302 33.5059 18.009 33.0228 18.009 31.1434V18.3625H21.768V31.1965C21.768 35.0898 19.4859 36.862 16.1562 36.862C13.1491 36.862 11.4037 35.3046 10.5176 33.4251M23.8098 33.0226L26.8704 31.2506C27.6762 32.5664 28.7234 33.5329 30.5759 33.5329C32.1335 33.5329 33.1266 32.7542 33.1266 31.6801C33.1266 30.3914 32.1063 29.9348 30.3879 29.1832L29.4484 28.7803C26.7363 27.6259 24.9373 26.1759 24.9373 23.115C24.9373 20.2956 27.0854 18.1475 30.4418 18.1475C32.8315 18.1475 34.5499 18.98 35.7849 21.1548L32.8582 23.0343C32.2137 21.8798 31.5159 21.4234 30.4418 21.4234C29.3409 21.4234 28.6427 22.1215 28.6427 23.0343C28.6427 24.162 29.3409 24.6186 30.9518 25.3168L31.8915 25.7195C35.0866 27.089 36.8857 28.485 36.8857 31.6264C36.8857 35.0098 34.2276 36.8623 30.6565 36.8623C27.166 36.8623 24.9105 35.1976 23.8098 33.0226Z"
-                    fill="#323330"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_281_4643">
-                    <rect width="40" height="40" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_281_4643)">
-                  <path
-                    d="M30.625 -0.000976562H9.375C4.19733 -0.000976562 0 4.19635 0 9.37402V30.624C0 35.8017 4.19733 39.999 9.375 39.999H30.625C35.8027 39.999 40 35.8017 40 30.624V9.37402C40 4.19635 35.8027 -0.000976562 30.625 -0.000976562Z"
-                    fill="#F0DB4F"
-                  />
-                  <path
-                    d="M10.5177 33.4254L13.5787 31.5729C14.1693 32.62 14.7065 33.5059 15.9951 33.5059C17.2302 33.5059 18.009 33.0228 18.009 31.1434V18.3625H21.768V31.1965C21.768 35.0898 19.4859 36.862 16.1562 36.862C13.1491 36.862 11.4037 35.3046 10.5176 33.4251M23.8098 33.0226L26.8704 31.2506C27.6762 32.5664 28.7234 33.5329 30.5759 33.5329C32.1335 33.5329 33.1266 32.7542 33.1266 31.6801C33.1266 30.3914 32.1063 29.9348 30.3879 29.1832L29.4484 28.7803C26.7363 27.6259 24.9373 26.1759 24.9373 23.115C24.9373 20.2956 27.0854 18.1475 30.4418 18.1475C32.8315 18.1475 34.5499 18.98 35.7849 21.1548L32.8582 23.0343C32.2137 21.8798 31.5159 21.4234 30.4418 21.4234C29.3409 21.4234 28.6427 22.1215 28.6427 23.0343C28.6427 24.162 29.3409 24.6186 30.9518 25.3168L31.8915 25.7195C35.0866 27.089 36.8857 28.485 36.8857 31.6264C36.8857 35.0098 34.2276 36.8623 30.6565 36.8623C27.166 36.8623 24.9105 35.1976 23.8098 33.0226Z"
-                    fill="#323330"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_281_4643">
-                    <rect width="40" height="40" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_281_4643)">
-                  <path
-                    d="M30.625 -0.000976562H9.375C4.19733 -0.000976562 0 4.19635 0 9.37402V30.624C0 35.8017 4.19733 39.999 9.375 39.999H30.625C35.8027 39.999 40 35.8017 40 30.624V9.37402C40 4.19635 35.8027 -0.000976562 30.625 -0.000976562Z"
-                    fill="#F0DB4F"
-                  />
-                  <path
-                    d="M10.5177 33.4254L13.5787 31.5729C14.1693 32.62 14.7065 33.5059 15.9951 33.5059C17.2302 33.5059 18.009 33.0228 18.009 31.1434V18.3625H21.768V31.1965C21.768 35.0898 19.4859 36.862 16.1562 36.862C13.1491 36.862 11.4037 35.3046 10.5176 33.4251M23.8098 33.0226L26.8704 31.2506C27.6762 32.5664 28.7234 33.5329 30.5759 33.5329C32.1335 33.5329 33.1266 32.7542 33.1266 31.6801C33.1266 30.3914 32.1063 29.9348 30.3879 29.1832L29.4484 28.7803C26.7363 27.6259 24.9373 26.1759 24.9373 23.115C24.9373 20.2956 27.0854 18.1475 30.4418 18.1475C32.8315 18.1475 34.5499 18.98 35.7849 21.1548L32.8582 23.0343C32.2137 21.8798 31.5159 21.4234 30.4418 21.4234C29.3409 21.4234 28.6427 22.1215 28.6427 23.0343C28.6427 24.162 29.3409 24.6186 30.9518 25.3168L31.8915 25.7195C35.0866 27.089 36.8857 28.485 36.8857 31.6264C36.8857 35.0098 34.2276 36.8623 30.6565 36.8623C27.166 36.8623 24.9105 35.1976 23.8098 33.0226Z"
-                    fill="#323330"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_281_4643">
-                    <rect width="40" height="40" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_281_4643)">
-                  <path
-                    d="M30.625 -0.000976562H9.375C4.19733 -0.000976562 0 4.19635 0 9.37402V30.624C0 35.8017 4.19733 39.999 9.375 39.999H30.625C35.8027 39.999 40 35.8017 40 30.624V9.37402C40 4.19635 35.8027 -0.000976562 30.625 -0.000976562Z"
-                    fill="#F0DB4F"
-                  />
-                  <path
-                    d="M10.5177 33.4254L13.5787 31.5729C14.1693 32.62 14.7065 33.5059 15.9951 33.5059C17.2302 33.5059 18.009 33.0228 18.009 31.1434V18.3625H21.768V31.1965C21.768 35.0898 19.4859 36.862 16.1562 36.862C13.1491 36.862 11.4037 35.3046 10.5176 33.4251M23.8098 33.0226L26.8704 31.2506C27.6762 32.5664 28.7234 33.5329 30.5759 33.5329C32.1335 33.5329 33.1266 32.7542 33.1266 31.6801C33.1266 30.3914 32.1063 29.9348 30.3879 29.1832L29.4484 28.7803C26.7363 27.6259 24.9373 26.1759 24.9373 23.115C24.9373 20.2956 27.0854 18.1475 30.4418 18.1475C32.8315 18.1475 34.5499 18.98 35.7849 21.1548L32.8582 23.0343C32.2137 21.8798 31.5159 21.4234 30.4418 21.4234C29.3409 21.4234 28.6427 22.1215 28.6427 23.0343C28.6427 24.162 29.3409 24.6186 30.9518 25.3168L31.8915 25.7195C35.0866 27.089 36.8857 28.485 36.8857 31.6264C36.8857 35.0098 34.2276 36.8623 30.6565 36.8623C27.166 36.8623 24.9105 35.1976 23.8098 33.0226Z"
-                    fill="#323330"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_281_4643">
-                    <rect width="40" height="40" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+                </div>
+              ))}
             </div>
           </div>
         </div>

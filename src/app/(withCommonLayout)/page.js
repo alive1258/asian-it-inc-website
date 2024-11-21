@@ -15,16 +15,16 @@ export default function Home() {
   return (
     <>
       <main>
-        <Banner />
-        <ServiceMarquee />
-        <Service />
+       <Banner />
+        <ServiceMarquee /> 
+        <Service /> 
         <AboutHome />
-        <OurProducts />
+        <OurProducts /> 
         <WhyTrustUs />
         <Brands />
         <OurWorks />
         <Testimonials />
-        <Blogs />
+        {/* <Blogs /> */}
         <FaqHome />
         <Contact />
       </main>
