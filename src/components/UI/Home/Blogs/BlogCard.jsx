@@ -35,7 +35,7 @@ const BlogCard = ({ blog }) => {
           <button className="font-semibold text-[#4b4f56] hover:text-primary-base hover:border-b hover:border-b-primary-base duration-200">
             <Link
               className="flex items-center gap-1 group-hover:text-primary-base text-sm md:text-base"
-              href={`/blogs/${blog?.id}`}
+              href={`/blogs/${blog?.slug}`}
             >
               {" "}
               <TiPlus />

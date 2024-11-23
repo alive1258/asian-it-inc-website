@@ -1,7 +1,6 @@
 import React from "react";
 import SwiperTestimonial from "./SwiperTestimonial";
 import TitleSection from "../titleSection/TitleSection";
-// import SwiperTestimonial from "./SwiperTestimonial";
 
 const Testimonials = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/testimonial`, {

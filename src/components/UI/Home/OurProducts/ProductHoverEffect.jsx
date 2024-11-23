@@ -1,12 +1,5 @@
 import Link from "next/link";
-import { HiOutlineExternalLink } from "react-icons/hi";
-
 const ProductHoverEffect = ({ item }) => {
-  //   const techArray = ourWorkDetail?.tech
-  //     ?.split(", ")
-  //     .slice(0, 3)
-  //     .map((tech) => `#${tech.trim()}`);
-
   return (
     <>
       <div
@@ -28,15 +21,14 @@ const ProductHoverEffect = ({ item }) => {
             </p>
             {/* <p className="text-white">{ourWorkDetail?.title}</p> */}
             <div className="flex items-center gap-4 text-white mt-[18px]">
-              {/* {techArray?.map((tech, index) => (
+              {item?.assignedTechnologies?.slice(0,3)?.map((tech, index) => (
                 <span key={index} className="">
-                  {tech}
+                  # {tech?.technologies?.name}
                 </span>
-              ))} */}
-              #React, #Next, #TS, #Mongoose
+              ))}
             </div>
             <div className="pt-2">
-              <Link href={`/our-products/${item?.id}`}>
+              <Link href={`/our-products/${item?.slug}`}>
                 <p className="underline text-[#7579FA] text-[16px] font-medium">
                   Check Full Details
                 </p>

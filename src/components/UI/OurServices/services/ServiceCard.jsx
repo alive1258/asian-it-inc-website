@@ -6,8 +6,8 @@ import { Collapse } from "react-collapse";
 const ServiceCard = ({ setActiveService, activeService, index, item }) => {
   return (
     <div className="text-white">
-      <div class="bg-black text-white border-b border-[#323438] py-8 md:p-8 space-y-8">
-        <div class="flex items-start space-x-6">
+      <div className="bg-black text-white border-b border-[#323438] py-8 md:p-8 space-y-8">
+        <div className="flex items-start space-x-6">
           <div className="relative w-[51px] h-[58px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
               onClick={() => setActiveService(index)}
               className="flex items-start justify-between w-full cursor-pointer gap-2"
             >
-              <h3 class=" text-[25px] capitalize md:text-[32px] font-semibold">
+              <h3 className=" text-[25px] capitalize md:text-[32px] font-semibold">
                 {item?.name}
               </h3>
               {activeService !== index && (
@@ -40,7 +40,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
                   height={100}
                   src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
                   alt="Service Thumbnail"
-                  class="w-[71px] h-[54px] rounded  object-fill"
+                  className="w-[71px] h-[54px] rounded  object-fill"
                 />
               )}
             </div>
@@ -48,12 +48,12 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
               <div className="mt-3">
                 <div className="flex items-start justify-between gap-[32px]">
                   <div>
-                    <p class="text-sm text-gray-base">
+                    <p className="text-sm text-gray-base">
                      {truncateText(item?.description,15)}
                     </p>
                     <a
                       href="#"
-                      class="inline-flex items-center mt-2 text-[#6D71FA] underline"
+                      className="inline-flex items-center mt-2 text-[#6D71FA] underline"
                     >
                       Learn more
                       <svg
@@ -75,7 +75,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
                     height={250}
                     src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
                     alt="Service Thumbnail"
-                    class="w-[134px] h-[102px] rounded-lg object-fill"
+                    className="w-[134px] h-[102px] rounded-lg object-fill"
                   />
                 </div>
               </div>
