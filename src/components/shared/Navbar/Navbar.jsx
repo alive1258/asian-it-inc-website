@@ -27,7 +27,6 @@ const Navbar = () => {
     { display: "Products", path: "/our-products" },
     { display: "Pricing", path: "/pricing" },
     { display: "Our Works", path: "/our-works" },
-    { display: "Contact Us", path: "/contact-us" },
   ];
 
   return (

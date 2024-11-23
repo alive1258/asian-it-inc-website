@@ -45,7 +45,7 @@ const OurProducts = () => {
 
               <div className="pt-16 ">
                 <div className="flex justify-center ">
-                  <ul className="flex space-x-10  font-medium ">
+                  <ul className="flex space-x-10 flex-wrap  font-medium ">
                     <li
                       onClick={() => handleOnclick(null)}
                       className={` ${

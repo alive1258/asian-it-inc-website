@@ -1,10 +1,17 @@
-import Image from "next/image";
-import privacyBanner from "../../../../public/assets/images/aboutBanner.png";
+import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
+
+export async function generateMetadata() {
+  return {
+    title: `Privacy policy | Asian it inc`,
+    description:
+    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+  };
+}
 
 const PrivacyPage = async () => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/privacy-policies`,
+      `${process.env.NEXT_PUBLIC_API_URL}/privacy-policy`,
       {
         next: {
           revalidate: 30,
@@ -15,22 +22,15 @@ const PrivacyPage = async () => {
     return (
       <>
         <div>
-          <Image
-            className="w-full md:h-[350px] h-[150px]"
-            src={privacyBanner}
-            height={350}
-            width={900}
-            alt="privacyBanner"
-          />
+          <HeroBanners />
         </div>
 
         <div className="md:mt-28 mt-12 md:pb-10 pb-5 container">
-          {privacyPolicies?.data?.map((privacyPolicy) => (
-            <div
-              key={privacyPolicy._id}
-              dangerouslySetInnerHTML={{ __html: privacyPolicy?.description }}
-            ></div>
-          ))}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: privacyPolicies?.data?.description,
+            }}
+          ></div>
         </div>
       </>
     );

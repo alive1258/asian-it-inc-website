@@ -18,7 +18,7 @@ const OurWorks = async () => {
       <div className="bg-[#000] py-16">
         <div className="container">
           <div className="text-white">
-            <div>
+            <div className="space-y-4">
               <p
                 style={{
                   background:
@@ -30,8 +30,8 @@ const OurWorks = async () => {
               >
                 Our Works
               </p>
-              <h1 className="text-[40px] pt-2 font-normal ">Case studies</h1>
-              <p className=" text-sm text-gray-base pt-2 font-normal  w-[490px]">
+              <h1 className="text-[40px]  font-normal ">Case studies</h1>
+              <p className=" text-sm text-gray-base  font-normal  max-w-[490px]">
                 Lorem ipsum dolor sit amet consectetur. In non tortor erat
                 lectus in amet tellus tincidunt. Sem feugiat semper fringilla
                 ante molestie amet faucibus. Pulvinar turpis hac mi augue etiam.

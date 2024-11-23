@@ -1,31 +1,36 @@
 import Image from "next/image";
-import blogImage from "../../../../public/assets/images/image 17.png";
 import RelatedBlogs from "./RelatedBlogs/RelatedBlogs";
 
 // Assuming this is a Next.js Page component
-const BlogDetails = ({ blog }) => {
+const BlogDetails =  ({ blogsData }) => {
   return (
-    <div className="container mb-12">
-      {/* Blog Image Section */}
+    <>
       <div className="">
         <Image
-          className="h-[400px] w-full"
-          src={blog?.image}
+          className="max-h-[480px] w-full object-fill"
+          src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${blogsData?.photo}`}
           width={1280}
           height={600}
           alt="blog details"
         />
       </div>
+      <div className="container  py-[56px]">
+        {/* Blog Image Section */}
+        <button className=" bg-[#A0A3FC]  px-6 py-2 text-white rounded-full"> {blogsData?.blogCategory?.name} </button>
+        {/* Blog Content */}
+        <div className="mt-[32px]">
+          <h1 className="text-[20px] font-semibold ">{blogsData?.name}</h1>
+          <div className="mt-5">
+            <div
+              dangerouslySetInnerHTML={{ __html: blogsData?.description }}
+            ></div>
+          </div>
+        </div>
 
-      {/* Blog Content */}
-      <div className="mt-20">
-        <div>{blog?.title}</div>
-        <div dangerouslySetInnerHTML={{ __html: blog?.description }}></div>
+        {/* Related Blogs Section */}
+        <RelatedBlogs />
       </div>
-
-      {/* Related Blogs Section */}
-      <RelatedBlogs />
-    </div>
+    </>
   );
 };
 

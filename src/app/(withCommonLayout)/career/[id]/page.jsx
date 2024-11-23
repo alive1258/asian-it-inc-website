@@ -1,7 +1,7 @@
 import Image from "next/image";
 import JobCard from "@/components/UI/Career/JobCard";
 import { HiDotsCircleHorizontal } from "react-icons/hi";
-import blend from "../../../../../public/assets/images/noisy-gradients.png";
+import blend from "../../../../../public/assets/images/industryBg.png";
 
 const CareerDetails = () => {
   return (

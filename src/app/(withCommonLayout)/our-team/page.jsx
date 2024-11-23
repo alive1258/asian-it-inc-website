@@ -1,21 +1,22 @@
+import React from "react";
 import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
-import Contact from "@/components/UI/Home/Contact/Contact";
+import Team from "@/components/UI/Team/Team";
 export async function generateMetadata() {
   return {
-    title: `Contact Us | Asian it inc`,
+    title: `Our Teams | Asian it inc`,
     description:
     "Asian It Inc provides custom web and mobile app solutions for businesses.",
   };
 }
-const ContactPage = () => {
+const page = () => {
   return (
     <>
       <div>
         <HeroBanners />
+        <Team />
       </div>
-      <Contact />
     </>
   );
 };
 
-export default ContactPage;
+export default page;

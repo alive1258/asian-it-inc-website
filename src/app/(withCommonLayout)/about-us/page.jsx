@@ -1,5 +1,3 @@
-// import ImageGallery from "@/components/UI/AboutUs/ImageGallery/ImageGallery";
-// import ItServices from "@/components/UI/AboutUs/ItServices/ItServices";
 import AboutHome from "@/components/UI/Home/AboutHome/AboutHome";
 import Contact from "@/components/UI/Home/Contact/Contact";
 import FaqHome from "@/components/UI/Home/FaqHome/FaqHome";
@@ -7,10 +5,13 @@ import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
 import Brands from "@/components/UI/Home/Brands/Brands";
 import ImageGallery from "@/components/UI/AboutUs/ImageGallery/ImageGallery";
 import ItServices from "@/components/UI/AboutUs/ItServices/ItServices";
-// import Contact from "@/components/UI/Home/Contact/Contact";
-// import Brands from "@/components/UI/Home/Brands/Brands";
-// import FaqHome from "@/components/UI/Home/FaqHome/FaqHome";
-// import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
+export async function generateMetadata() {
+  return {
+    title: `About Us | Asian it inc`,
+    description:
+    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+  };
+}
 
 const page = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`, {
@@ -26,8 +27,8 @@ const page = async () => {
     <>
       <div className=" mt-20">
         <AboutHome />
-        <ImageGallery photos={aboutData?.photos}/>
-        <ItServices aboutData={aboutData}/>
+        <ImageGallery photos={aboutData?.photos} />
+        <ItServices aboutData={aboutData} />
         <Brands />
         <Testimonials />
         <FaqHome />

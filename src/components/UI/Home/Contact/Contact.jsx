@@ -4,6 +4,7 @@ import { BsFacebook } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
 import ContactForm from "./ContactForm";
+import TitleSection from "../titleSection/TitleSection";
 
 const Contact = () => {
   return (
@@ -11,30 +12,18 @@ const Contact = () => {
       <div className="bg-[#E4E5FE]">
         <div className="bg-[url('/assets/images/conatctBg.png')]  bg-cover bg-no-repeat pb-16">
           <div className="container">
-            <div className="flex justify-center pt-14 ">
-              <div>
-                <p className="text-[20px] pt-2 font-normal text-center">
-                  Contact
-                </p>
-                <h1
-                  className="text-[40px] font-semibold text-center"
-                  style={{
-                    background:
-                      "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  Contact Us For Any Questions
-                </h1>
-                <p className="text-[20px] pt-2 font-normal text-center w-[490px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt dolore.
-                </p>
-              </div>
+            <div className="pt-10">
+              <TitleSection
+                color={true}
+                name={"Contact"}
+                title={"Contact Us For Any Questions"}
+                description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt dolore.`}
+              />
             </div>
+
             <div>
-              <div className="mt-[60px] flex flex-col-reverse md:flex-row gap-10 items-start  justify-between">
+              <div className="mt-[90px] flex flex-col-reverse md:flex-row gap-10 items-start  justify-between">
                 <div className="w-full">
                   <h1 className="text-black-base text-2xl font-semibold pb-10 text-nowrap">
                     Contact Info :

@@ -9,10 +9,9 @@ const BlogCard = ({ blog }) => {
       <div className=" group shadow cursor-pointer hover:shadow-custom-10px hover:bg-[#F6F0FF]  rounded-lg delay-150 duration-300 transition-all">
         <div className=" md:h-[250px]">
           <Image
-            className="rounded-t-lg h-full"
+            className="rounded-t-lg h-full  object-fill "
             src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${blog?.photo}`}
             width={413}
-            layout="responsive"
             height={300}
             alt="blog"
           />
@@ -36,7 +35,7 @@ const BlogCard = ({ blog }) => {
           <button className="font-semibold text-[#4b4f56] hover:text-primary-base hover:border-b hover:border-b-primary-base duration-200">
             <Link
               className="flex items-center gap-1 group-hover:text-primary-base text-sm md:text-base"
-              href={`/blogs/${blog?.id}`}
+              href={`/blogs/${blog?.slug}`}
             >
               {" "}
               <TiPlus />

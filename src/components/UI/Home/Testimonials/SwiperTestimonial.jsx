@@ -1,5 +1,4 @@
 "use client";
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
@@ -8,11 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// import required modules
-
-import TestimonialCard from "./TestImonialCard";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import TestimonialCard from "./TestimonialCard";
 
 const SwiperTestimonial = ({ testimonials }) => {
   return (
@@ -58,8 +55,8 @@ const SwiperTestimonial = ({ testimonials }) => {
               className="mySwiper"
             >
               {/* testimonial 1 */}
-              {testimonials?.map((testimonial) => (
-                <SwiperSlide key={testimonial?._id}>
+              {testimonials?.map((testimonial,index) => (
+                <SwiperSlide key={index}>
                   <TestimonialCard testimonial={testimonial} />
                 </SwiperSlide>
               ))}
