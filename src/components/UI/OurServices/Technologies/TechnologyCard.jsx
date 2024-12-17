@@ -20,7 +20,7 @@ const TechnologyCard = ({ item }) => {
         viewport={{ once: false }}
         className="skillsBg"
       >
-        <div className=" bg-[#EFEFFE] h-[140px] w-[142px] border border-[#CCCDFD] rounded-lg ">
+        <div className=" bg-[#EFEFFE] h-[140px] w-[142px] border border-[#CCCDFD] hover:scale-105 transition-all ease-in-out rounded-lg ">
           <div className="p-4">
             <Image
               className="rounded-lg mx-auto w-[50px] h-[50px] "

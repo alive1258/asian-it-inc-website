@@ -9,9 +9,9 @@ const Service = () => {
 
   return (
     <>
-      <div className="bg-[#040408]">
+      <div className="bg-[#040408] ">
         <div className="bg-[url('/assets/images/industryBg.png')] bg-cover bg-no-repeat">
-          <div className="container mx-auto py-8">
+          <div className="container mx-auto md:py-24 py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10">
               {/* Left Section */}
               <div>
@@ -36,7 +36,7 @@ const Service = () => {
 
               {/* Right Section */}
 
-              <div className="h-[450px] overflow-y-scroll custom-scrollbar">
+              <div className="h-[450px] overflow-y-scroll md:pt-0 pt-10 custom-scrollbar">
                 {data?.data?.map((item, index) => (
                   <ServiceCard
                     activeService={activeService}
