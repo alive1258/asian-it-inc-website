@@ -7,7 +7,7 @@ const FooterBottom = () => {
       <div className=" md:mx-auto text-primary-muted mt-10 pt-6 border-t-[1px] border-[#D2D2D2] ">
         <div className="md:flex items-start container justify-between">
           <p className="text-center pb-4">
-            © {year} All rights reserved. Ethen Soft
+            © {year} All rights reserved by ASIAN IT INC
           </p>
           <ul className="md:flex md:space-y-0 space-y-3 items-center justify-between gap-8">
             <li>

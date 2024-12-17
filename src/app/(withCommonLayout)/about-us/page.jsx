@@ -5,11 +5,12 @@ import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
 import Brands from "@/components/UI/Home/Brands/Brands";
 import ImageGallery from "@/components/UI/AboutUs/ImageGallery/ImageGallery";
 import ItServices from "@/components/UI/AboutUs/ItServices/ItServices";
+import AboutBanner from "@/components/UI/AboutUs/AboutBanner/AboutBanner";
 export async function generateMetadata() {
   return {
     title: `About Us | Asian it inc`,
     description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      "Asian It Inc provides custom web and mobile app solutions for businesses.",
   };
 }
 
@@ -25,7 +26,8 @@ const page = async () => {
   const aboutData = data?.data || [];
   return (
     <>
-      <div className=" mt-20">
+      <div className="">
+        <AboutBanner />
         <AboutHome />
         <ImageGallery photos={aboutData?.photos} />
         <ItServices aboutData={aboutData} />
