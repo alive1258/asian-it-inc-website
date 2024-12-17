@@ -27,7 +27,7 @@ const OurProducts = () => {
               <div className="flex justify-center pt-14 ">
                 <div>
                   <h1
-                    className="text-[40px] font-semibold text-center"
+                    className="md:text-[40px] text-[30px] font-semibold text-center"
                     style={{
                       background:
                         "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
@@ -37,13 +37,13 @@ const OurProducts = () => {
                   >
                     Our Products
                   </h1>
-                  <p className="text-[20px] pt-2 font-normal">
+                  <p className="md:text-[20px] text-[16px] pt-2 font-normal">
                     We take digital experience to the next level
                   </p>
                 </div>
               </div>
 
-              <div className="pt-16 ">
+              <div className="md:pt-16 pt-8">
                 <div className="flex justify-center ">
                   <ul className="flex space-x-10 flex-wrap  font-medium ">
                     <li
@@ -68,7 +68,7 @@ const OurProducts = () => {
                   </ul>
                 </div>
 
-                <div className="pt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                <div className="md:pt-16 pt-9 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                   {allProducts?.data?.map((item) => (
                     <div key={item?.id} className="relative  group">
                       <Image

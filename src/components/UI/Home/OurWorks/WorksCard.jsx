@@ -29,12 +29,14 @@ const WorksCard = ({ item, index }) => {
           </button>
 
           {/* Title */}
-          <h1 className="text-white text-2xl md:text-[40px] md:leading-[48px] font-semibold capitalize">
+          <h1 className="text-white text-xl md:text-[40px] md:leading-[48px] font-semibold capitalize">
             {item?.name || "Work Name"}
           </h1>
 
           {/* Description */}
-          <p className=" text-gray-base text-sm md:text-base">{truncateText(item?.description || "", 18)}</p>
+          <p className=" text-gray-base text-sm md:text-base">
+            {truncateText(item?.description || "", 18)}
+          </p>
         </div>
       </div>
     </div>

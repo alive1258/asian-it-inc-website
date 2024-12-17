@@ -15,7 +15,7 @@ const OurWorks = async () => {
   const ourWorksData = data?.data || [];
   return (
     <>
-      <div className="bg-[#000] py-16">
+      <div className="bg-[#000] md:py-16 py-9">
         <div className="container">
           <div className="text-white">
             <div className="space-y-4">
@@ -26,11 +26,13 @@ const OurWorks = async () => {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
-                className=" text-[20px] font-semibold "
+                className=" md:text-[20px] text-[18px] font-semibold "
               >
                 Our Works
               </p>
-              <h1 className="text-[40px]  font-normal ">Case studies</h1>
+              <h1 className="md:text-[40px] text-[30px] font-normal ">
+                Case studies
+              </h1>
               <p className=" text-sm text-gray-base  font-normal  max-w-[490px]">
                 Lorem ipsum dolor sit amet consectetur. In non tortor erat
                 lectus in amet tellus tincidunt. Sem feugiat semper fringilla

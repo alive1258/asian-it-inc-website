@@ -37,7 +37,7 @@ const ServiceMarquee = async () => {
                   height={64}
                   alt="icon"
                 />
-                <h1 className="text-white text-5xl md:text-[64px] font-bold uppercase">
+                <h1 className="text-white text-3xl md:text-[64px] font-bold uppercase">
                   {item?.name}
                 </h1>
               </div>
@@ -64,7 +64,7 @@ const ServiceMarquee = async () => {
                 height={64}
                 alt="icon"
               />
-              <h1 className="text-stroke text-transparent text-5xl md:text-[64px] font-bold uppercase">
+              <h1 className="text-stroke  text-3xl md:text-[64px] font-bold uppercase">
                 {item?.name}
               </h1>
             </div>

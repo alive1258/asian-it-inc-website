@@ -21,7 +21,7 @@ const Brands = async () => {
         <div className="absolute z-[0] w-[180px] flex-shrink-0 h-[180px] top-0 -left-[200px] bg-[#FFC903]  opacity-40 blur-[150px]" />
         <div className="absolute z-[0] w-[180px]  h-[180px] top-0 rounded-[330px]  right-0 bg-[#FF0303]  opacity-70 blur-[150px]" />
         <div className="container relative overflow-hidden">
-          <div className="flex justify-center py-14 ">
+          <div className="flex justify-center md:py-14 py-5">
             <div
               style={{
                 background:
@@ -30,14 +30,14 @@ const Brands = async () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              <h1 className="text-[40px] font-semibold text-center">
+              <h1 className="md:text-[40px] text-[30px] font-semibold text-center">
                 Trusted by {brandsData?.length} + Brands
               </h1>
             </div>
           </div>
 
           <div>
-            <div className="py-12">
+            <div className="md:py-12 py-5">
               <Marquee
                 gradient={false}
                 speed={80}
@@ -81,7 +81,7 @@ const Brands = async () => {
                   {brandsData?.map((item, index) => (
                     <Image
                       key={index}
-                       layout="responsive"
+                      layout="responsive"
                       className="flex w-full h-full"
                       src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                       width={150}
@@ -106,7 +106,7 @@ const Brands = async () => {
                     {brandsData?.map((item, index) => (
                       <Image
                         key={index}
-                         layout="responsive"
+                        layout="responsive"
                         className="flex w-full h-full"
                         src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                         width={100}

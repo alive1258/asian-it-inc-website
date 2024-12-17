@@ -43,7 +43,7 @@ const ContactForm = () => {
             placeholder="Enter Your name"
             type="text"
             {...register("name", { required: "Name is required" })}
-            className="w-full rounded border-[1.5px] border-[#BFC1FD] bg-transparent py-3 px-5 text-black outline-none transition   placeholder:text-[#A3A3A3] focus:placeholder:text-black-base focus:border-info-base active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  focus:bg-[#EAEBFE] dark:bg-form-input text-black dark:focus:border-[#3137F8]"
+            className="w-full rounded border-[1.5px] border-[#3137F8] bg-transparent py-3 px-5 text-black outline-none transition   placeholder:text-[#A3A3A3] focus:placeholder:text-black-base focus:border-info-base active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  focus:bg-[#EAEBFE] dark:bg-form-input text-black dark:focus:border-[#3137F8]"
           />
           {errors.subject && (
             <p className="text-red-500 text-xs">{errors.subject.message}</p>
@@ -56,7 +56,7 @@ const ContactForm = () => {
             placeholder="Enter Your Subject"
             type="text"
             {...register("subject", { required: "Subject is required" })}
-            className="w-full rounded border-[1.5px] border-[#BFC1FD] bg-transparent py-3 px-5 text-black outline-none transition placeholder:text-[#A3A3A3] focus:placeholder:text-black-base  focus:border-info-base active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  focus:bg-[#EAEBFE] dark:bg-form-input text-black dark:focus:border-[#3137F8]"
+            className="w-full rounded border-[1.5px] border-[#3137F8] bg-transparent py-3 px-5 text-black outline-none transition placeholder:text-[#A3A3A3] focus:placeholder:text-black-base  focus:border-[#3137F8] active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  focus:bg-[#EAEBFE] dark:bg-form-input text-black dark:focus:border-[#3137F8]"
           />
           {errors.subject && (
             <p className="text-red-500 text-xs">{errors.subject.message}</p>
@@ -69,7 +69,7 @@ const ContactForm = () => {
         <p className="text-base">Email</p>
 
         <input
-          className="w-full rounded border-[1.5px] border-[#BFC1FD] bg-transparent py-3 px-5 text-black outline-none transition focus:border-info-base placeholder:text-[#A3A3A3] focus:placeholder:text-black-base  active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  dark:bg-form-input text-black focus:bg-[#EAEBFE] dark:focus:border-[#3137F8]"
+          className="w-full rounded border-[1.5px] border-[#3137F8] bg-transparent py-3 px-5 text-black outline-none transition focus:border-info-base placeholder:text-[#A3A3A3] focus:placeholder:text-black-base  active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  dark:bg-form-input text-black focus:bg-[#EAEBFE] dark:focus:border-[#3137F8]"
           placeholder="Enter Your Email"
           type="email"
           {...register("email", {
@@ -92,7 +92,7 @@ const ContactForm = () => {
           rows={5}
           placeholder="Type Your Message"
           {...register("message", { required: "Message is required" })}
-          className="w-full rounded border-[1.5px] border-[#BFC1FD] bg-transparent py-3 px-5 text-black outline-none transition focus:border-info-base placeholder:text-[#A3A3A3] focus:placeholder:text-black-base  focus:bg-[#EAEBFE] active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  text-black dark:focus:border-[#3137F8]"
+          className="w-full rounded border-[1.5px] border-[#3137F8] bg-transparent py-3 px-5 text-black outline-none transition focus:border-info-base placeholder:text-[#A3A3A3] focus:placeholder:text-black-base  focus:bg-[#EAEBFE] active:border-[#3137F8] disabled:cursor-default disabled:bg-whiter  text-black dark:focus:border-[#3137F8]"
         />
         {errors.message && (
           <p className="text-red-500 text-xs">{errors.message.message}</p>

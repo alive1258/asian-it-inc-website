@@ -40,16 +40,14 @@ const AboutHome = async () => {
                     ASIAN IT INC.
                   </span>
                 </h2>
-                <h1 className="text-[32px] pt-4 font-semibold">
+                <h1 className="md:text-[32px] text-[24px] pt-4 font-semibold">
                   {aboutData?.name?.split(" ").slice(0, -2).join(" ")}{" "}
                   <span className="text-[#5A5FF9]">
                     {aboutData?.name?.split(" ").slice(-2).join(" ")}
                   </span>
                 </h1>
 
-                <p className="pt-6">
-                  {aboutData?.description}
-                </p>
+                <p className="pt-6">{aboutData?.description}</p>
 
                 {/* Cards section */}
                 <div className="pt-6">
@@ -134,19 +132,19 @@ const AboutHome = async () => {
             </div>
 
             {/* Image section */}
-            <div className="py-24">
+            <div className="md:py-24 py-8">
               <div className="bg-[#B5B7FC] rounded-lg">
                 <Image
-                  className="w-full relative bottom-3 left-3 h-auto"
+                  className="w-full relative bottom-3 md:left-3 h-auto"
                   src={imageAi}
                   height={400}
                   width={400}
                   alt="home about image"
                 />
               </div>
-              <div className="flex justify-center items-center bottom-72 relative z-50">
+              <div className="flex justify-center items-center md:bottom-72 bottom-44 relative z-50">
                 <Image
-                  className="size-20 rounded-full"
+                  className="md:size-20 size-16 rounded-full"
                   src={platBtn}
                   height={20}
                   width={20}

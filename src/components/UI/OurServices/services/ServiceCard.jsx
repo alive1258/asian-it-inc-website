@@ -21,7 +21,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
                 fill="#7579FA"
               />
             </svg>
-            <p className=" absolute top-1 text-[24px] font-medium flex justify-center items-center w-full h-full">
+            <p className=" absolute top-1 md:text-[24px] text-[18px] font-medium flex justify-center items-center w-full h-full">
               {index + 1 >= 10 ? "" : "0"}
               {index + 1}.{" "}
             </p>
@@ -31,7 +31,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
               onClick={() => setActiveService(index)}
               className="flex items-start justify-between w-full cursor-pointer gap-2"
             >
-              <h3 className=" text-[25px] capitalize md:text-[32px] font-semibold">
+              <h3 className=" text-[20px] capitalize md:text-[32px] font-semibold">
                 {item?.name}
               </h3>
               {activeService !== index && (
@@ -40,7 +40,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
                   height={100}
                   src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
                   alt="Service Thumbnail"
-                  className="w-[71px] h-[54px] rounded  object-fill"
+                  className="w-[71px] h-[54px] rounded object-fill"
                 />
               )}
             </div>
@@ -49,7 +49,7 @@ const ServiceCard = ({ setActiveService, activeService, index, item }) => {
                 <div className="flex items-start justify-between gap-[32px]">
                   <div>
                     <p className="text-sm text-gray-base">
-                     {truncateText(item?.description,15)}
+                      {truncateText(item?.description, 15)}
                     </p>
                     <a
                       href="#"

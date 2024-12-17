@@ -26,27 +26,26 @@ const Service = () => {
                 >
                   Services
                 </h4>
-                <h1 className="text-[35px] md:text-[60px] leading-normal font-semibold text-white">
+                <h1 className="text-[30px] md:text-[60px] leading-normal font-semibold text-white">
                   We Help your business grow
                 </h1>
-                <p className="text-base md:text-lg text-gray-base">
+                <p className="text-base md:text-lg md:py-0 py-4 text-gray-base">
                   {`We're the tech experts behind innovative digital and technology solutions that will make your brand stand out! Let us be your guides in achieving your boldest business objectives.`}
                 </p>
               </div>
 
               {/* Right Section */}
-              <div>
-                <div className="h-[450px] overflow-y-scroll custom-scrollbar">
-                  {data?.data?.map((item, index) => (
-                    <ServiceCard
-                      activeService={activeService}
-                      setActiveService={setActiveService}
-                      key={index}
-                      index={index}
-                      item={item}
-                    />
-                  ))}
-                </div>
+
+              <div className="h-[450px] overflow-y-scroll custom-scrollbar">
+                {data?.data?.map((item, index) => (
+                  <ServiceCard
+                    activeService={activeService}
+                    setActiveService={setActiveService}
+                    key={index}
+                    index={index}
+                    item={item}
+                  />
+                ))}
               </div>
             </div>
           </div>

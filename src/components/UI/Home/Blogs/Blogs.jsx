@@ -15,15 +15,15 @@ const Blogs = async () => {
   return (
     <>
       <div className="bg-[#E4E5FE]">
-        <div className="bg-[url('/assets/images/blogBg.png')] bg-cover bg-no-repeat py-16">
+        <div className="bg-[url('/assets/images/blogBg.png')] bg-cover bg-no-repeat md:py-16 py-6">
           <div className="container">
             <div className="flex justify-center pt-14 ">
               <div>
-                <p className="text-[20px] uppercase pt-2 font-normal text-center">
+                <p className="md:text-[20px] text-[18px] uppercase pt-2 font-normal text-center">
                   Our Blog
                 </p>
                 <h1
-                  className="text-[40px] font-semibold text-center"
+                  className="md:text-[40px] text-[30px] font-semibold text-center"
                   style={{
                     background:
                       "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
