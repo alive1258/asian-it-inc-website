@@ -6,6 +6,7 @@ import Brands from "@/components/UI/Home/Brands/Brands";
 import ImageGallery from "@/components/UI/AboutUs/ImageGallery/ImageGallery";
 import ItServices from "@/components/UI/AboutUs/ItServices/ItServices";
 import AboutBanner from "@/components/UI/AboutUs/AboutBanner/AboutBanner";
+import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 export async function generateMetadata() {
   return {
     title: `About Us | Asian it inc`,
@@ -27,7 +28,7 @@ const page = async () => {
   return (
     <>
       <div className="">
-        <AboutBanner />
+        <HeroBanners />
         <AboutHome />
         <ImageGallery photos={aboutData?.photos} />
         <ItServices aboutData={aboutData} />

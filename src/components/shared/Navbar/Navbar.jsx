@@ -59,7 +59,7 @@ const Navbar = () => {
         </Link>
 
         {/* Hamburger Button for Mobile */}
-        <div className="md:hidden block mr-5">
+        <div className="md:hidden block ">
           <button className="pt-1.5 rounded-md" onClick={topFunction}>
             {open ? (
               <HiMiniXMark

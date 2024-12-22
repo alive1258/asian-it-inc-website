@@ -49,9 +49,9 @@ const OurWorks = async () => {
             ))}
           </div>
           <div className="pt-16 w-44 mx-auto">
-            <Link href="/all-cases">
+            {/* <Link href="">
               <Button content="See all Cases" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

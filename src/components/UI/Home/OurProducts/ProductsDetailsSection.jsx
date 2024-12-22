@@ -7,7 +7,7 @@ const ProductsDetailsSection = ({ productData }) => {
   return (
     <div>
       <div>
-        <div className="bg-gradient-to-r from-[#f6f8fc] to-[#eff6f6]">
+        <div className="bg-gradient-to-r from-[#37435f] to-[#3c4e58]">
           <div className=" container  mx-auto">
             <ProductHeader productData={productData} />
           </div>

@@ -8,7 +8,7 @@ export async function generateMetadata() {
   return {
     title: `Pricing | Asian it inc`,
     description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      "Asian It Inc provides custom web and mobile app solutions for businesses.",
   };
 }
 
@@ -17,7 +17,6 @@ const page = () => {
     <>
       <div>
         <HeroBanners />
-
         <ProductPrice />
         <Testimonials />
         <FaqHome />

@@ -2,7 +2,7 @@ import OurProducts from "@/components/UI/Home/OurProducts/OurProducts";
 import Brands from "@/components/UI/Home/Brands/Brands";
 import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
 import FaqHome from "@/components/UI/Home/FaqHome/FaqHome";
-import ProductBanner from "@/components/UI/Home/OurProducts/ProductBanner";
+import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 
 export async function generateMetadata() {
   return {
@@ -16,7 +16,7 @@ const page = () => {
   return (
     <>
       <div>
-        <ProductBanner />
+        <HeroBanners />
         <OurProducts />
         <Brands />
         <Testimonials />

@@ -11,10 +11,6 @@ const FooterBottom = () => {
           </p>
           <ul className="md:flex md:space-y-0 space-y-3 items-center justify-between gap-8">
             <li>
-              <Link href="/refund-policy">Refund Policy</Link>
-            </li>
-            <span className="md:block hidden">|</span>
-            <li>
               <Link href="/privacy-policy">Privacy Policy</Link>
             </li>
             <span className="md:block hidden">|</span>

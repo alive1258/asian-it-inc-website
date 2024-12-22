@@ -33,7 +33,7 @@ const Blogs = async () => {
                 >
                   The Latest from our Blog
                 </h1>
-                <p className=" text-sm md:text-[18px] pt-2 font-normal text-center w-[490px]">
+                <p className=" text-sm md:text-[18px] pt-2 font-normal text-center max-w-[490px]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt dolore.
                 </p>
