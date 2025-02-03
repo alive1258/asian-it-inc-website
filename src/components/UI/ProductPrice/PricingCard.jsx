@@ -9,7 +9,6 @@ import Button from "../Button/Button";
 const PricingCard = async ({ item }) => {
   const [bgColor, setBgColor] = useState("");
 
-
   useEffect(() => {
     // Generate a green-dominant random color
     const generateGreenShade = () => {
@@ -51,9 +50,9 @@ const PricingCard = async ({ item }) => {
           <h1 className="text-base text-black-base font-medium z-[500]">
             Start at $ <span> {item?.price}</span>{" "}
           </h1>
-          <Link href={`/pricing/${item?.id}`}>
+          {/* <Link href={`/pricing/${item?.id}`}>
             <Button content="Buy Now" className="p-2" />
-          </Link>
+          </Link> */}
         </div>
 
         {/* hover effect */}

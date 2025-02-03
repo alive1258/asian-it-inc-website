@@ -12,11 +12,11 @@ const Technologies = async () => {
   return (
     <>
       <div className=" bg-white">
-        <div className="container py-16">
+        <div className="container md:py-16 py-7">
           <div className="flex justify-center pt-14 ">
             <div>
               <h1
-                className="text-[40px] font-semibold text-center"
+                className="md:text-[40px]  text-[30px] font-semibold text-center"
                 style={{
                   background:
                     "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
@@ -26,7 +26,7 @@ const Technologies = async () => {
               >
                 Our Software Development Technologies
               </h1>
-              <p className="text-[20px] pt-2 font-normal text-center ">
+              <p className="md:text-[20px] text-[16px] pt-2 font-normal text-center ">
                 Lorem ipsum dolor sit amet consectetur. Eu nullam ullamcorper et
                 fermentum pellentesque augue id. Etiam condimentum malesuada
                 quis dui aliquet in aliquam. Arcu pellentesque morbi mattis

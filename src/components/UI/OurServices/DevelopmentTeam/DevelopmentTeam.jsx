@@ -17,12 +17,12 @@ const DevelopmentTeam = async () => {
           <h1 className="text-[25px]  md:text-[40px] flex justify-center text-[#fff]">
             Our Development Team Capabilities
           </h1>
-          <div className="pt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12">
+          <div className="pt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 md:gap-12 gap-7">
             {capabilities?.map((item) => (
               <div key={item.id}>
-                <div className="space-y-8">
+                <div className="md:space-y-8 space-y-5">
                   <Image
-                    className=" w-[80px] h-[80px] mx-auto "
+                    className=" md:w-[80px] w-[50px] h-[50px] md:h-[80px] mx-auto "
                     src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
                     height={80}
                     width={80}

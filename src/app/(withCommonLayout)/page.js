@@ -14,20 +14,18 @@ import Service from "@/components/UI/OurServices/services/Service";
 export default function Home() {
   return (
     <>
-      <main>
-       <Banner />
-        <ServiceMarquee /> 
-        <Service /> 
-        <AboutHome />
-        <OurProducts /> 
-        <WhyTrustUs />
-        <Brands />
-        <OurWorks />
-        <Testimonials />
-        <Blogs />
-        <FaqHome />
-        <Contact />
-      </main>
+      <Banner />
+      <ServiceMarquee />
+      <Service />
+      <AboutHome />
+      <OurProducts />
+      <WhyTrustUs />
+      <Brands />
+      <OurWorks />
+      <Testimonials />
+      <Blogs />
+      <FaqHome />
+      <Contact />
     </>
   );
 }

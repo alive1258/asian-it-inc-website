@@ -9,13 +9,14 @@ const Service = () => {
 
   return (
     <>
-      <div className="bg-[#040408]">
+      <div className="bg-[#040408] ">
         <div className="bg-[url('/assets/images/industryBg.png')] bg-cover bg-no-repeat">
-          <div className=" container mx-auto py-8">
-            <div className=" grid  grid-cols-1 lg:grid-cols-2 md:gap-10">
+          <div className="container mx-auto md:py-24 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 md:gap-10">
+              {/* Left Section */}
               <div>
                 <h4
-                  className="text-[20px] font-semibold leading-normal "
+                  className="text-[20px] font-semibold leading-normal"
                   style={{
                     background:
                       "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
@@ -25,30 +26,53 @@ const Service = () => {
                 >
                   Services
                 </h4>
-                <h1 className="text-[35px] md:text-[60px] leading-normal font-semibold text-white">
+                <h1 className="text-[30px] md:text-[60px] leading-normal font-semibold text-white">
                   We Help your business grow
                 </h1>
-                <p className="text-base md:text-lg text-gray-base">
+                <p className="text-base md:text-lg md:py-0 py-4 text-gray-base">
                   {`We're the tech experts behind innovative digital and technology solutions that will make your brand stand out! Let us be your guides in achieving your boldest business objectives.`}
                 </p>
               </div>
-              <div>
-                <div>
-                  {data?.data?.map((item, index) => (
-                    <ServiceCard
-                      activeService={activeService}
-                      setActiveService={setActiveService}
-                      key={index}
-                      index={index}
-                      item={item}
-                    />
-                  ))}
-                </div>
+
+              {/* Right Section */}
+
+              <div className="h-[450px] overflow-y-scroll overflow-y-scroll-hidden md:pt-0 pt-10 custom-scrollbar">
+                {data?.data?.map((item, index) => (
+                  <ServiceCard
+                    activeService={activeService}
+                    setActiveService={setActiveService}
+                    key={index}
+                    index={index}
+                    item={item}
+                  />
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Custom Scrollbar Styles */}
+      <style jsx>{`
+        /* Scrollbar customization for Webkit browsers */
+        .h-[450px]::-webkit-scrollbar {
+          width: 8px; /* Adjust scrollbar width */
+        }
+
+        .h-[450px]::-webkit-scrollbar-track {
+          background: #e0f0e0; /* Light green track */
+          border-radius: 10px;
+        }
+
+        .h-[450px]::-webkit-scrollbar-thumb {
+          background: #00ff00; /* Green thumb */
+          border-radius: 10px;
+        }
+
+        .h-[450px]::-webkit-scrollbar-thumb:hover {
+          background: #00cc00; /* Darker green on hover */
+        }
+      `}</style>
     </>
   );
 };

@@ -1,14 +1,9 @@
-import React from "react";
 import projectIcon from "../../../../../public/assets/images/project.png";
-import imageAi from "../../../../../public/assets/images/imageAi.png";
-import platBtn from "../../../../../public/assets/images/playbtn.png";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button/Button";
 const AboutHome = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -20,7 +15,7 @@ const AboutHome = async () => {
     <>
       <div className="relative bg-[#EFEFFE] ">
         <div className="container pt-16">
-          <div className="grid md:grid-cols-2 grid-cols-1 md:gap-0 gap-4">
+          <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-4 gap-4">
             {/* Semi-transparent background section */}
             <div className="relative">
               <div className="absolute inset-0 bg-[url('/assets/images/homeAboutBg.png')] bg-lightgray bg-[0px_-155.772px] bg-[length:100%_113.232%] bg-no-repeat mix-blend-color-burn opacity-60 z-0" />
@@ -40,16 +35,14 @@ const AboutHome = async () => {
                     ASIAN IT INC.
                   </span>
                 </h2>
-                <h1 className="text-[32px] pt-4 font-semibold">
+                <h1 className="md:text-[32px] text-[24px] pt-4 font-semibold">
                   {aboutData?.name?.split(" ").slice(0, -2).join(" ")}{" "}
                   <span className="text-[#5A5FF9]">
                     {aboutData?.name?.split(" ").slice(-2).join(" ")}
                   </span>
                 </h1>
 
-                <p className="pt-6">
-                  {aboutData?.description}
-                </p>
+                <p className="pt-6">{aboutData?.description}</p>
 
                 {/* Cards section */}
                 <div className="pt-6">
@@ -65,8 +58,10 @@ const AboutHome = async () => {
                           alt="logo"
                         />
                         <div>
-                          <h3 className="text-[32px] font-semibold">110+</h3>
-                          <p className="text-[16px]">{aboutData?.project}</p>
+                          <h3 className="text-[32px] font-semibold">
+                            {aboutData?.project}
+                          </h3>
+                          <p className="text-[16px]">Project</p>
                         </div>
                       </div>
                     </div>
@@ -81,7 +76,9 @@ const AboutHome = async () => {
                           alt="logo"
                         />
                         <div>
-                          <h3 className="text-[32px] font-semibold">10+</h3>
+                          <h3 className="text-[32px] font-semibold">
+                            {aboutData?.experience}
+                          </h3>
                           <p className="text-[16px]">Experience</p>
                         </div>
                       </div>
@@ -100,7 +97,9 @@ const AboutHome = async () => {
                           alt="logo"
                         />
                         <div>
-                          <h3 className="text-[32px] font-semibold">99%</h3>
+                          <h3 className="text-[32px] font-semibold">
+                            {aboutData?.client_satisfaction}
+                          </h3>
                           <p className="text-[16px]">Client Satisfaction</p>
                         </div>
                       </div>
@@ -116,7 +115,9 @@ const AboutHome = async () => {
                           alt="logo"
                         />
                         <div>
-                          <h3 className="text-[32px] font-semibold">30+</h3>
+                          <h3 className="text-[32px] font-semibold">
+                            {aboutData?.team_member}
+                          </h3>
                           <p className="text-[16px]">Team Member</p>
                         </div>
                       </div>
@@ -133,25 +134,20 @@ const AboutHome = async () => {
               </div>
             </div>
 
-            {/* Image section */}
-            <div className="py-24">
+            {/* Video section */}
+            <div className="md:py-24 py-8">
               <div className="bg-[#B5B7FC] rounded-lg">
-                <Image
-                  className="w-full relative bottom-3 left-3 h-auto"
-                  src={imageAi}
-                  height={400}
-                  width={400}
-                  alt="home about image"
-                />
-              </div>
-              <div className="flex justify-center items-center bottom-72 relative z-50">
-                <Image
-                  className="size-20 rounded-full"
-                  src={platBtn}
-                  height={20}
-                  width={20}
-                  alt="home about image"
-                />
+                <div className="relative left-3 bottom-3 w-full  h-auto">
+                  <iframe
+                    className="w-full h-[400px] md:h-[500px] rounded-lg"
+                    src={aboutData?.video_url}
+                    // src="https://www.youtube.com/embed/PgYgykVPOlc"
+                    title="YouTube Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>

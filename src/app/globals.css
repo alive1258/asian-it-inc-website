@@ -178,7 +178,7 @@
     @apply max-w-[1440px] w-full mx-auto px-5 md:px-20;
   }
   .social-icons {
-    @apply size-10 cursor-pointer rounded-lg bg-gray-400  hover:scale-110 hover:text-gray-800 duration-300 transition-all ease-in-out p-2;
+    @apply size-10 cursor-pointer rounded-lg bg-[#EAEBFE] hover:scale-110 hover:text-gray-800 duration-300 transition-all ease-in-out p-2;
   }
   /* .bg-btn {
     @apply cursor-pointer focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg py-[10px] md:text-[15px] text-[13px];
@@ -188,10 +188,10 @@
     background: linear-gradient(270deg, #550495 0%, #ce24f8 100%);
   } */
   .outline-btn {
-    @apply text-white border duration-300 border-[#3137F8] hover:text-[#fff] hover:bg-[#3137F8] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-[16px] px-5 py-2 text-center;
+    @apply text-white  border duration-300 border-[#3137F8] hover:text-[#fff] hover:bg-[#3137F8] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-[16px] px-5 py-2 text-center;
   }
   .bg-btn {
-    @apply bg-[#3137F8] cursor-pointer   font-medium rounded-3xl text-[16px] px-5 py-2.5 text-center;
+    @apply bg-[#3137F8] w-fit cursor-pointer   font-medium rounded-3xl text-[16px] px-5 py-2.5 text-center;
   }
 }
 /* .bg-btn {
@@ -327,7 +327,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 /* hero section home  */
@@ -496,8 +495,7 @@
     background-position: right top;
   }
   .footer-container {
-    background-image: url(/assets/images/Shapes.png), url(/assets/images/fs.png),
-      url(/assets/images/fb.png), url(/assets/images/fbt.png);
+    background-image: url(/assets/images/Shapes.png);
     background-position: right bottom, left, bottom,
       calc(50% + 20px) calc(100% - 20px);
   }
@@ -683,4 +681,35 @@
 
 .ReactCollapse--collapse {
   transition: height 500ms;
+}
+
+/* globals.css */
+
+/* Custom Scrollbar for Webkit Browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0px; /* Scrollbar width */
+  overflow: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e0f0e0; /* Light green track */
+  border-radius: 0px;
+  width: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #002bff; /* Green thumb */
+  border-radius: 6px;
+  width: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #002bff; /* Darker green thumb on hover */
+  width: 0px;
+}
+
+/* Firefox Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Makes scrollbar thin */
+  scrollbar-color: #002bff #e0f0e0; /* Green thumb, light track */
 }

@@ -17,7 +17,7 @@ const Industries = async () => {
         <div className=" py-16">
           <div className="container">
             <h1
-              className="text-[54px] font-semibold flex justify-center items-center"
+              className="md:text-[54px] text-[30px] font-semibold flex justify-center items-center"
               style={{
                 background:
                   "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
