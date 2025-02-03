@@ -3,9 +3,7 @@ import Link from "next/link";
 import ButtonOutline from "../../Button/ButtonOutline";
 import BlogSection from "./BlogSection";
 const Blogs = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -15,7 +13,7 @@ const Blogs = async () => {
   return (
     <>
       <div className="bg-[#E4E5FE]">
-        <div className="bg-[url('/assets/images/blogBg.png')] bg-cover bg-no-repeat md:py-16 py-6">
+        <div className="bg-[url('/assets/images/blogBGH.png')] bg-no-repeat bg-center md:py-16 py-6">
           <div className="container">
             <div className="flex justify-center pt-14 ">
               <div>
@@ -33,9 +31,11 @@ const Blogs = async () => {
                 >
                   The Latest from our Blog
                 </h1>
-                <p className=" text-sm md:text-[18px] pt-2 font-normal text-center max-w-[490px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt dolore.
+                <p className=" text-sm md:text-[18px] pt-2 font-normal text-center max-w-[620px]">
+                  Stay informed with the latest trends in web development,
+                  custom software solutions, and digital transformation. Our
+                  expert blogs provide valuable insights to help your business
+                  grow in the ever-evolving tech landscape.
                 </p>
               </div>
             </div>

@@ -4,9 +4,7 @@ import Button from "../../Button/Button";
 import WorksCard from "./WorksCard";
 
 const OurWorks = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-works`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-works`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -33,11 +31,12 @@ const OurWorks = async () => {
               <h1 className="md:text-[40px] text-[30px] font-normal ">
                 Case studies
               </h1>
-              <p className=" text-sm text-gray-base  font-normal  max-w-[490px]">
-                Lorem ipsum dolor sit amet consectetur. In non tortor erat
-                lectus in amet tellus tincidunt. Sem feugiat semper fringilla
-                ante molestie amet faucibus. Pulvinar turpis hac mi augue etiam.
-                Id erat id imperdiet posuere senectus purus.
+              <p className=" text-[16px] text-gray-base  font-normal  md:max-w-[600px]">
+                Asian IT Inc. collaborated with a leading e-commerce company to
+                develop a custom software solution that automated inventory
+                management and optimized order processing. By integrating
+                advanced analytics and real-time tracking, our team created a
+                seamless, scalable platform tailored to the client’s needs
               </p>
             </div>
           </div>
@@ -49,9 +48,9 @@ const OurWorks = async () => {
             ))}
           </div>
           <div className="pt-16 w-44 mx-auto">
-            {/* <Link href="">
+            <Link href="/our-works">
               <Button content="See all Cases" />
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>

@@ -9,19 +9,14 @@ import { FaStar } from "react-icons/fa";
 import OurTechnology from "./OurTechnology";
 
 const Banner = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
 
   const resTechnologies = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/technologies`,
-    {
-      next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-    }
+    `${process.env.NEXT_PUBLIC_API_URL}/technologies`
   );
 
   if (!resTechnologies.ok) {
@@ -37,22 +32,24 @@ const Banner = async () => {
           <div className="container  relative md:flex  justify-between gap-8 md:gap-[71px]">
             <div>
               <div className=" space-5">
-                <h2 className=" text-white  text-base md:text-lg  capitalize">
-                  {" "}
+                <h2 className=" text-[#DEDEDE]  text-base md:text-lg  capitalize">
                   {bannersData.name}
                 </h2>
                 <h1
-                  className="text-[25px] md:text-[35px] lg:text-[45px] leading-normal font-semibold"
+                  className="text-[25px] md:text-[35px] lg:text-[54px] leading-normal font-semibold"
                   style={{
                     background:
                       "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
+                    // textShadow: "1px 3px 0px #69089A",
+                    webkitTextStrokeWidth: "1",
+                    // boxShadow: "1px 3px 0px 0px #69089A",
                   }}
                 >
                   {bannersData.title}
                 </h1>
-                <p className="pt-6 text-sm md:text-base text-[#fff]">
+                <p className="pt-6 text-sm md:text-base text-[#DEDEDE]">
                   {bannersData.description}
                 </p>
               </div>

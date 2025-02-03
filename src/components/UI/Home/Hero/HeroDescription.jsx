@@ -8,10 +8,10 @@ const HeroDescription = ({ heroDescription }) => {
   return (
     <>
       <div className="pl-1 md:pl-0">
-        <h1 className=" md:text-[56px] text-[28px] font-semibold text-white md:leading-[70px]">
+        <h1 className=" md:text-[56px] text-[28px] font-semibold text-[#DEDEDE] md:leading-[70px]">
           {heroDescription?.title}
         </h1>
-        <p className="md:text-lg  text-[14px]  font-medium my-4 md:my-0 md:pt-8 md:pb-12 text-[#f1f1f1]">
+        <p className="md:text-lg  text-[14px]  font-medium my-4 md:my-0 md:pt-8 md:pb-12 text-[#DEDEDE]">
           {heroDescription?.description}
         </p>
         {/* <Image

@@ -6,8 +6,8 @@ import { truncateCharacters } from "@/utils/descriptionTextCounter";
 const BlogCard = ({ blog }) => {
   return (
     <>
-      <div className=" group shadow cursor-pointer hover:shadow-custom-10px hover:bg-[#F6F0FF]  rounded-lg delay-150 duration-300 transition-all">
-        <div className=" md:h-[250px]">
+      <div className=" group bg-[#E4E5FE] shadow cursor-pointer hover:shadow-custom-10px hover:bg-[#F6F0FF]  rounded-lg delay-150 duration-300 transition-all">
+        <div className="md:h-[250px]">
           <Image
             className="rounded-t-lg h-full  object-fill "
             src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${blog?.photo}`}

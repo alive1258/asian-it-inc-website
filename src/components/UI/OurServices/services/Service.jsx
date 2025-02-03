@@ -36,7 +36,7 @@ const Service = () => {
 
               {/* Right Section */}
 
-              <div className="h-[450px] overflow-y-scroll md:pt-0 pt-10 custom-scrollbar">
+              <div className="h-[450px] overflow-y-scroll overflow-y-scroll-hidden md:pt-0 pt-10 custom-scrollbar">
                 {data?.data?.map((item, index) => (
                   <ServiceCard
                     activeService={activeService}
