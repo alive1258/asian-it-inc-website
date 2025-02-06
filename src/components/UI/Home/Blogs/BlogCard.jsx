@@ -1,12 +1,28 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { TiPlus } from "react-icons/ti";
 import moment from "moment";
 import { truncateCharacters } from "@/utils/descriptionTextCounter";
+import { motion } from "framer-motion";
+
 const BlogCard = ({ blog }) => {
   return (
     <>
-      <div className=" group bg-[#E4E5FE] shadow cursor-pointer hover:shadow-custom-10px hover:bg-[#F6F0FF]  rounded-lg delay-150 duration-300 transition-all">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+
+          transition: {
+            duration: 0.8,
+            ease: "easeInOut",
+          },
+        }}
+        viewport={{ once: false }}
+        className=" group bg-[#E4E5FE] shadow cursor-pointer hover:shadow-custom-10px hover:bg-[#F6F0FF]  rounded-lg delay-150 duration-300 transition-all"
+      >
         <div className="md:h-[250px]">
           <Image
             className="rounded-t-lg h-full  object-fill "
@@ -26,7 +42,7 @@ const BlogCard = ({ blog }) => {
               {blog?.blogCategory?.name}
             </h6>
           </div>
-          <h1 className="text-black-base  group-hover:text-primary-base text-xl font-semibold capitalize">
+          <h1 className="text-black-base  group-hover:text-primary-base hover:text-[#bb4988] text-xl font-semibold capitalize">
             {truncateCharacters(blog?.name, 55)}
           </h1>
           <p className="text-black-base text-sm">
@@ -43,7 +59,7 @@ const BlogCard = ({ blog }) => {
             </Link>
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

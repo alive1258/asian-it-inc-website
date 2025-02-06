@@ -28,7 +28,7 @@ const OurWorks = async () => {
               >
                 Our Works
               </p>
-              <h1 className="md:text-[40px] text-[30px] font-normal ">
+              <h1 className="md:text-[40px] text-[30px] font-semibold ">
                 Case studies
               </h1>
               <p className=" text-[16px] text-gray-base  font-normal  md:max-w-[600px]">

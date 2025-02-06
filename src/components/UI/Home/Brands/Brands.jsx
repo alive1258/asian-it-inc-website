@@ -4,9 +4,7 @@ import Marquee from "react-fast-marquee";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
 const Brands = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/brands`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/brands`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

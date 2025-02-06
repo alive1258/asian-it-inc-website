@@ -6,7 +6,7 @@ import Providers from "@/lib/Providers/Providers";
 
 // Define the local font correctly
 const myFont = localFont({
-  src: "../../public/font/ClashDisplay-Regular.ttf", // Use a direct string path
+  src: "../../public/font/Outfit-VariableFont_wght.ttf", // Use a direct string path
   display: "swap", // Optional: Improves performance
 });
 

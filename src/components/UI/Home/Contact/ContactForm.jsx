@@ -101,10 +101,7 @@ const ContactForm = () => {
 
       {/* Submit Button */}
       <div className="mt-10 ">
-        <button
-          type="submit"
-          className="relative bg-primary-base px-6  py-2 md:py-3 rounded-full text-sm md:text-base text-white"
-        >
+        <button type="submit" className="bg-btn w-fit text-[#fff]">
           <span className=" "> {isLoading ? "Loading.." : "Submit Now "} </span>
         </button>
       </div>

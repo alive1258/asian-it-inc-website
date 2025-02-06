@@ -3,7 +3,7 @@ import WorkDetails from "@/components/UI/Home/OurWorks/WorkDetails/WorkDetails";
 export async function generateMetadata({ params }) {
   try {
     let response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/our-works/slug/${params?.slug}`
+      `${process.env.NEXT_PUBLIC_API_URL}/our-works/${params?.id}`
     );
     if (!response.ok) {
       throw new Error(`Failed to fetch Work Details with id: ${params?.id}`);
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
 const WorkDetailsPage = async ({ params }) => {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/ourWorks/slug/${params?.slug}`
+      `${process.env.NEXT_PUBLIC_API_URL}/our-works/${params?.id}`
     );
 
     if (!res.ok) {
@@ -56,12 +56,12 @@ const WorkDetailsPage = async ({ params }) => {
     const ourWorkData = await res.json();
 
     return (
-      <>
-        <WorkDetails blogsData={ourWorkData?.data} />
-      </>
+      <div className="">
+        <WorkDetails worksData={ourWorkData?.data} />
+      </div>
     );
-  } catch {
-    return null;
+  } catch (error) {
+    return <div>error</div>;
   }
 };
 

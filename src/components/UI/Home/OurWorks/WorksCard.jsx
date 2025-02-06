@@ -1,11 +1,24 @@
+"use client";
 import { truncateText } from "@/utils/descriptionTextCounter";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { motion } from "framer-motion";
 
 const WorksCard = ({ item, index }) => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+
+        transition: {
+          duration: 0.8,
+          ease: "easeInOut",
+        },
+      }}
+      viewport={{ once: false }}
+    >
       <div
         className={`flex flex-col md:flex-row ${
           index % 2 === 0 ? "md:flex-row-reverse" : ""
@@ -28,16 +41,16 @@ const WorksCard = ({ item, index }) => {
             {truncateText(item?.description || "", 18)}
           </p>
           <div className="text-[18px] hover:text-[#4e53d1] text-[#5A5FF9] border-b w-fit border-[#5A5FF9]">
-            <Link href={`/our-works/${item?.slug}`}>
+            <Link href={`/our-works/${item?.id}`}>
               <p>Check Full Case Study</p>
             </Link>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-[50%]">
+        <div className="w-full md:w-[50%] max-h-[400px] overflow-hidden rounded-[30px] relative">
           <Image
-            className="w-full hover:scale-105 duration-300 ease-in-out transition-all object-cover max-h-[400px] rounded-xl"
+            className="w-full hover:scale-110 hover:rotate-3 duration-300 overflow-hidden ease-in-out transition-all object-cover h-full "
             width={400}
             height={700}
             src={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item?.photo}`}
@@ -45,7 +58,7 @@ const WorksCard = ({ item, index }) => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

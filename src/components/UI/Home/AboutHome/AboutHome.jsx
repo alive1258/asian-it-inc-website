@@ -1,7 +1,8 @@
-import projectIcon from "../../../../../public/assets/images/project.png";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button/Button";
+import VideoSection from "./VideoSection";
+import AboutDescription from "./AboutDescription";
 const AboutHome = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
 
@@ -35,95 +36,7 @@ const AboutHome = async () => {
                     ASIAN IT INC.
                   </span>
                 </h2>
-                <h1 className="md:text-[32px] text-[24px] pt-4 font-semibold">
-                  {aboutData?.name?.split(" ").slice(0, -2).join(" ")}{" "}
-                  <span className="text-[#5A5FF9]">
-                    {aboutData?.name?.split(" ").slice(-2).join(" ")}
-                  </span>
-                </h1>
-
-                <p className="pt-6">{aboutData?.description}</p>
-
-                {/* Cards section */}
-                <div className="pt-6">
-                  <div className="flex space-x-4">
-                    {/* Project card */}
-                    <div className="bg-[#7579FA]/10 p-4 w-40 h-auto rounded-lg">
-                      <div className="flex items-center gap-x-3">
-                        <Image
-                          className="size-10 "
-                          src={projectIcon}
-                          height={28}
-                          width={151}
-                          alt="logo"
-                        />
-                        <div>
-                          <h3 className="text-[32px] font-semibold">
-                            {aboutData?.project}
-                          </h3>
-                          <p className="text-[16px]">Project</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Experience card */}
-                    <div className="bg-[#7579FA]/10 p-4 h-auto rounded-lg">
-                      <div className="flex items-center gap-x-5">
-                        <Image
-                          className="size-10 "
-                          src={projectIcon}
-                          height={28}
-                          width={151}
-                          alt="logo"
-                        />
-                        <div>
-                          <h3 className="text-[32px] font-semibold">
-                            {aboutData?.experience}
-                          </h3>
-                          <p className="text-[16px]">Experience</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-5 flex space-x-4">
-                    {/* Client Satisfaction card */}
-                    <div className="bg-[#7579FA]/10 p-4 h-auto rounded-lg">
-                      <div className="flex items-center gap-x-5">
-                        <Image
-                          className="size-10 "
-                          src={projectIcon}
-                          height={28}
-                          width={151}
-                          alt="logo"
-                        />
-                        <div>
-                          <h3 className="text-[32px] font-semibold">
-                            {aboutData?.client_satisfaction}
-                          </h3>
-                          <p className="text-[16px]">Client Satisfaction</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Team Member card */}
-                    <div className="bg-[#7579FA]/10 p-4 h-auto rounded-lg">
-                      <div className="flex items-center gap-x-5">
-                        <Image
-                          className="size-10 "
-                          src={projectIcon}
-                          height={28}
-                          width={151}
-                          alt="logo"
-                        />
-                        <div>
-                          <h3 className="text-[32px] font-semibold">
-                            {aboutData?.team_member}
-                          </h3>
-                          <p className="text-[16px]">Team Member</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <AboutDescription aboutData={aboutData} />
 
                 {/* Contact Us button */}
                 <div className="pt-16 w-40">
@@ -136,19 +49,7 @@ const AboutHome = async () => {
 
             {/* Video section */}
             <div className="md:py-24 py-8">
-              <div className="bg-[#B5B7FC] rounded-lg">
-                <div className="relative left-3 bottom-3 w-full  h-auto">
-                  <iframe
-                    className="w-full h-[400px] md:h-[500px] rounded-lg"
-                    src={aboutData?.video_url}
-                    // src="https://www.youtube.com/embed/PgYgykVPOlc"
-                    title="YouTube Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
+              <VideoSection aboutData={aboutData} />
             </div>
           </div>
         </div>

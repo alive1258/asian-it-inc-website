@@ -22,8 +22,8 @@ const ProductPriceSection = ({ prices }) => {
         ))}
       </section>
 
-      <div  className=" flex justify-center items-center pt-10">
-        <Button content="View All Products" className="p-2" />
+      <div className=" flex justify-center items-center pt-10">
+        <Button content="View All Products Price" className="p-2" />
       </div>
     </>
   );
