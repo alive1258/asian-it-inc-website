@@ -2,16 +2,16 @@ import Blogs from "@/components/UI/Home/Blogs/Blogs";
 import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 export async function generateMetadata() {
   return {
-    title: `Blogs | Asian it inc`,
+    title: `Blogs |  Core Mind Soft`,
     description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   };
 }
 const page = () => {
   return (
     <>
       <div>
-        <HeroBanners/>
+        <HeroBanners />
       </div>
       <Blogs />
     </>

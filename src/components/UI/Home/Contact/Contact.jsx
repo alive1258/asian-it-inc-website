@@ -48,7 +48,7 @@ const Contact = () => {
           <TitleSection
             color={true}
             title="Contact Us For Any Questions"
-            description="Partner with Asian IT Inc. for cutting-edge IT solutions, tailored to drive your business forward.Our expert team is ready to assist you—reach out today and experience seamless technology solutions.From IT consulting to software development, Asian IT Inc. is here to transform your vision into reality."
+            description="Partner with  Core Mind Soft. for cutting-edge IT solutions, tailored to drive your business forward.Our expert team is ready to assist you—reach out today and experience seamless technology solutions.From IT consulting to software development,  Core Mind Soft. is here to transform your vision into reality."
           />
           <div className="mt-[90px] flex flex-col-reverse md:flex-row gap-10 items-start justify-between">
             <div className="w-full">

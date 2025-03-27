@@ -24,7 +24,7 @@ const Footer = () => {
                     alt="logo"
                   />
                   <h3 className="md:text-2xl text-lg font-semibold text-[#fff]">
-                    ASIAN IT INC
+                    Core Mind Soft
                   </h3>
                 </div>
               </Link>
@@ -33,7 +33,7 @@ const Footer = () => {
                 Empowering businesses with innovative IT solutions and
                 exceptional customer support. Your trusted partner for seamless
                 technology integration and reliable IT services. Contact us
-                today to explore how Asian IT Inc. can drive your digital
+                today to explore how Core Mind Soft. can drive your digital
                 transformation.
               </p>
               <h5 className="text-[#E9E9EA] pb-4">Follow Us</h5>

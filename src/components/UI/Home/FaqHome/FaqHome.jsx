@@ -20,7 +20,7 @@ const FaqHome = async () => {
             <TitleSection title={"Frequently Asked Questions"} />
             <p className="text-[#949494] text-center max-w-[600px] mx-auto">
               {" "}
-              Our clients trust Asian IT Inc. for delivering high-quality,
+              Our clients trust Core Mind Soft. for delivering high-quality,
               custom software and website solutions that drive real business
               results. They praise our professionalism, technical expertise, and
               commitment to exceeding expectations.

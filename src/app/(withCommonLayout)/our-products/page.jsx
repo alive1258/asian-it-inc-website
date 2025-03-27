@@ -6,9 +6,9 @@ import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 
 export async function generateMetadata() {
   return {
-    title: `Our Products | Asian it inc`,
+    title: `Our Products |  Core Mind Soft`,
     description:
-      "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   };
 }
 

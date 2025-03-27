@@ -12,11 +12,11 @@ const myFont = localFont({
 
 export const metadata = {
   title: {
-    default: "Asian It Inc",
-    template: `%s | Asian It Inc`,
+    default: " Core Mind Soft",
+    template: `%s |  Core Mind Soft`,
   },
   keywords: [
-    "Asian It Inc",
+    " Core Mind Soft",
     "Web development services",
     "Next.js solutions",
     "Custom web solutions",
@@ -27,24 +27,24 @@ export const metadata = {
     icon: `https://i.ibb.co/w7HRw2Q/logo.webp`, // Fix incorrect URL
   },
   description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+    " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   openGraph: {
     type: "website",
     url: "https://www.asianitinc.com",
-    title: "Asian It Inc - Web and Mobile Solutions",
+    title: " Core Mind Soft - Web and Mobile Solutions",
     description: "Custom Web and mobile app solutions tailored for businesses.",
     images: [
       {
         url: "https://i.ibb.co/w7HRw2Q/logo.webp", // Fix incorrect URL
         width: 800,
         height: 600,
-        alt: "Asian It Inc Logo",
+        alt: " Core Mind Soft Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Asian It Inc - Web and Mobile Solutions",
+    title: " Core Mind Soft - Web and Mobile Solutions",
     description: "Custom web and mobile app solutions tailored for businesses.",
     image: "https://www.asianitinc.com/images/twitter",
   },

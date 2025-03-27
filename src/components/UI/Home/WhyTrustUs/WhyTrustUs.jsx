@@ -25,7 +25,7 @@ const WhyTrustUs = async () => {
               }}
             >
               <p className="md:text-[20px]  text-[18px] text-center pt-2 font-normal">
-                ASIAN IT INC SO DIFFERENT?
+                Core Mind Soft SO DIFFERENT?
               </p>
               <h1 className="md:text-[40px] text-[30px] font-semibold text-center">
                 Why Trust Us?

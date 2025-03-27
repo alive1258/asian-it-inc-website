@@ -22,13 +22,13 @@ const Technologies = async () => {
                 Our Software Development Technologies
               </h1>
               <p className="md:text-[20px] text-[16px] pt-2 font-normal text-center ">
-                Asian IT Inc. provides innovative software development solutions
-                tailored to meet business needs with efficiency and reliability.
-                We prioritize innovation, scalability, and security to create
-                robust digital experiences.Our team of experts ensures seamless
-                development, meeting industry standards and client expectations.
-                With a commitment to excellence, we transform ideas into
-                high-performance software solutions.
+                Core Mind Soft. provides innovative software development
+                solutions tailored to meet business needs with efficiency and
+                reliability. We prioritize innovation, scalability, and security
+                to create robust digital experiences.Our team of experts ensures
+                seamless development, meeting industry standards and client
+                expectations. With a commitment to excellence, we transform
+                ideas into high-performance software solutions.
               </p>
             </div>
           </div>

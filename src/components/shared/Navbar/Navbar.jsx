@@ -53,7 +53,7 @@ const Navbar = () => {
                 isScrolled ? "text-[#3137F8]" : "text-[#fff]"
               }`}
             >
-              ASIAN IT INC
+              Core Mind Soft
             </h3>
           </div>
         </Link>

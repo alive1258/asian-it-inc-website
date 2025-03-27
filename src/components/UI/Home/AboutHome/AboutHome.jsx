@@ -33,7 +33,7 @@ const AboutHome = async () => {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    ASIAN IT INC.
+                    Core Mind Soft.
                   </span>
                 </h2>
                 <AboutDescription aboutData={aboutData} />
