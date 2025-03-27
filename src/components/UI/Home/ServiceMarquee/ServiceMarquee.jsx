@@ -13,7 +13,7 @@ const ServiceMarquee = async () => {
     <>
       <div className="py-16  space-y-8 bg-[#040408] ">
         {/* left marquee  */}
-        <div>
+        {/* <div>
           <Marquee
             gradient={false}
             speed={80}
@@ -38,7 +38,7 @@ const ServiceMarquee = async () => {
               </div>
             ))}
           </Marquee>
-        </div>
+        </div> */}
 
         {/* right marquee  */}
         <Marquee
