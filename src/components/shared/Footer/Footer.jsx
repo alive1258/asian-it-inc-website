@@ -38,22 +38,13 @@ const Footer = () => {
               </p>
               <h5 className="text-[#E9E9EA] pb-4">Follow Us</h5>
               <div className="flex items-center gap-4">
-                <a
-                  href="https://www.facebook.com/profile.php?id=61562726343346"
-                  target="_blank"
-                >
+                <a href="" target="_blank">
                   <BsFacebook className="social-icons hover:bg-[#5A5FF9] text-[#5A5FF9] hover:text-white duration-150 bg-white" />
                 </a>
-                <a
-                  href="https://www.linkedin.com/company/ethen-soft/about/?viewAsMember=true"
-                  target="_blank"
-                >
+                <a href="" target="_blank">
                   <FaLinkedin className="social-icons hover:bg-[#5A5FF9] text-[#5A5FF9] hover:text-white duration-150 bg-white" />
                 </a>
-                <a
-                  href="https://x.com/EthenSoft?fbclid=IwZXh0bgNhZW0CMTAAAR0t8rfRbeXgm5_8S060kghWEk_PHGc7UWKmQ67ECQsZkEJVw55xt2h5tgU_aem_MYkBOm5VjCMXThOKu09RLA"
-                  target="_blank"
-                >
+                <a href="" target="_blank">
                   <FaXTwitter className="social-icons hover:bg-[#5A5FF9] text-[#5A5FF9] hover:text-white duration-150 bg-white" />
                 </a>
               </div>
