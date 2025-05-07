@@ -28,12 +28,12 @@ const OurWorks = async () => {
               >
                 Our Works
               </p>
-              <h1 className="md:text-[40px] text-[30px] font-normal ">
+              <h1 className="md:text-[40px] text-[30px] font-semibold ">
                 Case studies
               </h1>
               <p className=" text-[16px] text-gray-base  font-normal  md:max-w-[600px]">
-                Asian IT Inc. collaborated with a leading e-commerce company to
-                develop a custom software solution that automated inventory
+                Core Mind Soft. collaborated with a leading e-commerce company
+                to develop a custom software solution that automated inventory
                 management and optimized order processing. By integrating
                 advanced analytics and real-time tracking, our team created a
                 seamless, scalable platform tailored to the client’s needs

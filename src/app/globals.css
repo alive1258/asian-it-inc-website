@@ -188,10 +188,10 @@
     background: linear-gradient(270deg, #550495 0%, #ce24f8 100%);
   } */
   .outline-btn {
-    @apply text-white  border duration-300 border-[#3137F8] hover:text-[#fff] hover:bg-[#3137F8] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-[16px] px-5 py-2 text-center;
+    @apply text-white  border duration-300 border-[#3137F8] hover:text-[#fff] hover:bg-[#3439db] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-[16px] px-5 py-2 text-center;
   }
   .bg-btn {
-    @apply bg-[#3137F8] w-fit cursor-pointer   font-medium rounded-3xl text-[16px] px-5 py-2.5 text-center;
+    @apply bg-[#3137F8] hover:bg-[#3439db] w-fit cursor-pointer   font-medium rounded-3xl text-[16px] px-5 py-2.5 text-center;
   }
 }
 /* .bg-btn {
@@ -258,10 +258,12 @@
 }
 
 .text-stroke {
-  margin: 0;
-  font-size: 3em;
-  -webkit-text-stroke-color: #6d71fa;
-  -webkit-text-stroke-width: thin;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--Primary-P400, #6d71fa);
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
+  line-height: normal;
 }
 
 @layer components {
@@ -709,6 +711,7 @@
 }
 
 /* Firefox Scrollbar */
+
 .custom-scrollbar {
   scrollbar-width: thin; /* Makes scrollbar thin */
   scrollbar-color: #002bff #e0f0e0; /* Green thumb, light track */

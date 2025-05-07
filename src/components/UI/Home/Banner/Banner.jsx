@@ -4,6 +4,9 @@ import React from "react";
 import Button from "../../Button/Button";
 import Image from "next/image";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
+import manPic from "../../../../../public/assets/images/manA.jpg";
+import man1Pic from "../../../../../public/assets/images/manA1.jpg";
+import man2Pic from "../../../../../public/assets/images/manA3.jpg";
 
 import { FaStar } from "react-icons/fa";
 import OurTechnology from "./OurTechnology";
@@ -69,21 +72,21 @@ const Banner = async () => {
                 <div className="flex -space-x-3">
                   <Image
                     className="md:size-12 border-[#7579FA] border-2  size-9 rounded-full"
-                    src={asianItIncLogo}
+                    src={manPic}
                     height={28}
                     width={151}
                     alt="logo"
                   />
                   <Image
                     className="md:size-12 border-[#7579FA] border-2  size-9 rounded-full"
-                    src={asianItIncLogo}
+                    src={man1Pic}
                     height={28}
                     width={151}
                     alt="logo"
                   />
                   <Image
                     className="md:size-12 border-[#7579FA] border-2  size-9 rounded-full"
-                    src={asianItIncLogo}
+                    src={man2Pic}
                     height={28}
                     width={151}
                     alt="logo"

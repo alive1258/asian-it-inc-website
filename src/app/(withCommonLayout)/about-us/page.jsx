@@ -9,16 +9,14 @@ import AboutBanner from "@/components/UI/AboutUs/AboutBanner/AboutBanner";
 import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 export async function generateMetadata() {
   return {
-    title: `About Us | Asian it inc`,
+    title: `About Us |  Core Mind Soft`,
     description:
-      "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   };
 }
 
 const page = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

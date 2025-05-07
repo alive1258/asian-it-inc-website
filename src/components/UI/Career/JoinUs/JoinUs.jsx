@@ -20,8 +20,8 @@ const JoinUs = () => {
                   Why Join Us
                 </h1>
                 <p className="text-[20px] pt-2 font-normal">
-                  We at Asian it inc. offer some of the most amazing benefits to
-                  our employees.
+                  We at Core Mind Soft. offer some of the most amazing benefits
+                  to our employees.
                 </p>
               </div>
             </div>

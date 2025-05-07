@@ -1,12 +1,7 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 const ServiceMarquee = async () => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/service-marquee`,
-    {
-      next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-    }
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/service-marquee`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -18,7 +13,7 @@ const ServiceMarquee = async () => {
     <>
       <div className="py-16  space-y-8 bg-[#040408] ">
         {/* left marquee  */}
-        <div>
+        {/* <div>
           <Marquee
             gradient={false}
             speed={80}
@@ -43,7 +38,7 @@ const ServiceMarquee = async () => {
               </div>
             ))}
           </Marquee>
-        </div>
+        </div> */}
 
         {/* right marquee  */}
         <Marquee
@@ -64,7 +59,7 @@ const ServiceMarquee = async () => {
                 height={64}
                 alt="icon"
               />
-              <h1 className="text-stroke  text-3xl md:text-[64px] font-bold uppercase">
+              <h1 className="text-stroke text-3xl md:text-[64px] font-bold uppercase">
                 {item?.name}
               </h1>
             </div>

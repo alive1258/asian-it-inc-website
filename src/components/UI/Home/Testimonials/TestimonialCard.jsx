@@ -1,12 +1,27 @@
+"use client";
 import { BiSolidQuoteRight } from "react-icons/bi";
 import Image from "next/image";
 import { TiStar } from "react-icons/ti";
+import { motion } from "framer-motion";
 
 const TestimonialCard = ({ testimonial }) => {
   const rating = testimonial?.rating || 0;
   return (
     <>
-      <div className="md:flex items-center gap-10 md:mr-5">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+
+          transition: {
+            duration: 0.8,
+            ease: "easeInOut",
+          },
+        }}
+        viewport={{ once: false }}
+        className="md:flex items-center gap-10 md:mr-5"
+      >
         <div className="w-full md:h-full bg-gradient-to-b from-[#CCCFFF] to-[#cccfff3a] rounded-lg p-4">
           <Image
             className="md:h-40 h-32"
@@ -24,13 +39,7 @@ const TestimonialCard = ({ testimonial }) => {
           </p>
         </div>
         <div>
-          <div
-            className="bg-no-repeat pb-3.5  relative testmonial-title capitalize"
-            // style={{
-            //   backgroundImage: "url(/assets/images/testimonials/Vector2.png)",
-            //   backgroundPosition: "left bottom",
-            // }}
-          >
+          <div className="bg-no-repeat pb-3.5  relative capitalize text-primary-base text-xl font-semibold ">
             <span className="text-primary-base capitalize">” </span>
             {testimonial?.product?.name}
             <span className="text-primary-base "> ” </span>
@@ -63,7 +72,7 @@ const TestimonialCard = ({ testimonial }) => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

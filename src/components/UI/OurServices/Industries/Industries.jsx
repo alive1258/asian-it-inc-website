@@ -1,19 +1,28 @@
 import React from "react";
 const Industries = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/industries-we-cover`,
-    {
-      next: {
-        revalidate: 30,
-      },
-    }
+    `${process.env.NEXT_PUBLIC_API_URL}/industries-we-cover`
   );
   const data = await res.json();
   const industriesCover = data?.data || [];
 
   return (
     <>
-      <div className="">
+      <div className="relative overflow-hidden">
+        {/* Blurred Background Effect */}
+        <div
+          className="absolute"
+          style={{
+            width: "1035.52px",
+            height: "428.755px",
+            left: "202.24px",
+            bottom: "-324.301px",
+            borderRadius: "1035.52px",
+            opacity: 0.58,
+            background: "#FFC107",
+            filter: "blur(200px)",
+          }}
+        ></div>
         <div className=" py-16">
           <div className="container">
             <h1
@@ -28,7 +37,7 @@ const Industries = async () => {
               Industries We Cover
             </h1>
 
-            <div className="pt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-12">
+            <div className="pt-16 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-x-4 gap-y-5">
               {industriesCover?.map((item) => (
                 <div key={item?.id} className="flex items-center space-x-2">
                   <svg

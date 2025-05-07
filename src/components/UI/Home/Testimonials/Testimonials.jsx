@@ -17,7 +17,7 @@ const Testimonials = async () => {
           <TitleSection
             color={true}
             name={"TESTIMONIALS"}
-            description={`Our clients trust Asian IT Inc. for delivering high-quality, custom software and website solutions that drive real business results. They praise our professionalism, technical expertise, and commitment to exceeding expectations`}
+            description={`Our clients trust  Core Mind Soft. for delivering high-quality, custom software and website solutions that drive real business results. They praise our professionalism, technical expertise, and commitment to exceeding expectations`}
             title={"  What clients say"}
           />
         </div>

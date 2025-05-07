@@ -1,8 +1,6 @@
-import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
-import { CiLocationOn } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
-import { AiOutlineMail } from "react-icons/ai";
 import ContactForm from "./ContactForm";
 import TitleSection from "../titleSection/TitleSection";
 
@@ -50,7 +48,7 @@ const Contact = () => {
           <TitleSection
             color={true}
             title="Contact Us For Any Questions"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore."
+            description="Partner with  Core Mind Soft. for cutting-edge IT solutions, tailored to drive your business forward.Our expert team is ready to assist you—reach out today and experience seamless technology solutions.From IT consulting to software development,  Core Mind Soft. is here to transform your vision into reality."
           />
           <div className="mt-[90px] flex flex-col-reverse md:flex-row gap-10 items-start justify-between">
             <div className="w-full">
