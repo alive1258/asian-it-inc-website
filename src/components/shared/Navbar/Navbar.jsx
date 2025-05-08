@@ -92,7 +92,7 @@ const Navbar = () => {
               <Link
                 onClick={topFunction}
                 key={display}
-                className={`md:ml-6 hover:text-[#3137F8] hover:font-semibold font-normal ${
+                className={`md:ml-6 hover:text-[#3137F8]  font-normal ${
                   isActive
                     ? `font-semibold  ${
                         isScrolled ? "text-[#3137F8] " : "text-[#3137F8] "

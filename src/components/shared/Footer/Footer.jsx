@@ -162,7 +162,7 @@ const Footer = () => {
 
                   <div className="text-primary-muted flex flex-col gap-1.5">
                     <h6 className="font-medium">Email</h6>
-                    <p>asianitinc@gmail.com</p>
+                    <p>coremindsoft@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-x-4">
