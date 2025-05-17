@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 const ServiceMarquee = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/service-marquee`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/service-marquee`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

@@ -12,8 +12,8 @@ const myFont = localFont({
 
 export const metadata = {
   title: {
-    default: " Core Mind Soft",
-    template: `%s |  Core Mind Soft`,
+    default: "Core mind soft",
+    template: `Core mind soft`,
   },
   keywords: [
     " Core Mind Soft",
@@ -24,7 +24,7 @@ export const metadata = {
     "WordPress themes",
   ],
   icons: {
-    icon: `https://i.ibb.co/w7HRw2Q/logo.webp`, // Fix incorrect URL
+    icon: `https://i.ibb.co/fdKNr8xJ/logo-1.webp`,
   },
   description:
     " Core Mind Soft provides custom web and mobile app solutions for businesses.",

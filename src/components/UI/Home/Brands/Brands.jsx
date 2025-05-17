@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
 const Brands = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/brands`);

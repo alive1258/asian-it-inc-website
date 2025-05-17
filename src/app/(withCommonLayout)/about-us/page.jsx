@@ -11,7 +11,7 @@ export async function generateMetadata() {
   return {
     title: `About Us |  Core Mind Soft`,
     description:
-      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
+      "Asian It Inc provides custom web and mobile app solutions for businesses.",
   };
 }
 

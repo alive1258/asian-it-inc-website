@@ -19,8 +19,7 @@ const Banner = async () => {
   }
 
   const resTechnologies = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/technologies`
-  );
+    `${process.env.NEXT_PUBLIC_API_URL}/technologies`);
 
   if (!resTechnologies.ok) {
     throw new Error("Failed to fetch data");

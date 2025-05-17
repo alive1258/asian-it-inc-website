@@ -18,8 +18,8 @@ const RelatedBlogs = async () => {
       {/* blogs  */}
       <div className="mt-[28px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-          {blogsData?.slice(0, 3).map((blog) => (
-            <BlogCard key={blog?._id} blog={blog} />
+          {blogsData?.slice(0, 3).map((blog, index) => (
+            <BlogCard key={index} blog={blog} />
           ))}
         </div>
       </div>
