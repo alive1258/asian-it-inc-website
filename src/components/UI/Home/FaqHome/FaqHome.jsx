@@ -3,9 +3,7 @@ import AccordionList from "./AccordionList";
 import TitleSection from "../titleSection/TitleSection";
 
 const FaqHome = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/faqs`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/faqs`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

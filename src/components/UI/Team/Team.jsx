@@ -2,9 +2,7 @@ import { truncateCharacters } from "@/utils/descriptionTextCounter";
 import Image from "next/image";
 import React from "react";
 const Team = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-teams`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-teams`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -34,7 +32,7 @@ const Team = async () => {
                 />
                 <div className="pt-8">
                   <h2 className=" text-[25px] md:text-[32px] capitalize font-medium text-white">
-                    { truncateCharacters(item.name,20) }
+                    {truncateCharacters(item.name, 20)}
                   </h2>
                   <p className=" text-[20px] md:text-[24px] capitalize font-medium text-[#A3A3A3]">
                     {item.name}

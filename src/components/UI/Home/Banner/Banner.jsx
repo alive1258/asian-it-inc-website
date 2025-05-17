@@ -9,20 +9,14 @@ import { FaStar } from "react-icons/fa";
 import OurTechnology from "./OurTechnology";
 
 const Banner = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/banners`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
 
   const resTechnologies = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/technologies`,
-    {
-      next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-    }
-  );
+    `${process.env.NEXT_PUBLIC_API_URL}/technologies`);
 
   if (!resTechnologies.ok) {
     throw new Error("Failed to fetch data");

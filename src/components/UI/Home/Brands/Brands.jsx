@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import asianItIncLogo from "../../../../../public/assets/images/logo.png";
 
 const Brands = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/brands`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/brands`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -81,7 +78,7 @@ const Brands = async () => {
                   {brandsData?.map((item, index) => (
                     <Image
                       key={index}
-                       layout="responsive"
+                      layout="responsive"
                       className="flex w-full h-full"
                       src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                       width={150}
@@ -106,7 +103,7 @@ const Brands = async () => {
                     {brandsData?.map((item, index) => (
                       <Image
                         key={index}
-                         layout="responsive"
+                        layout="responsive"
                         className="flex w-full h-full"
                         src={process.env.NEXT_PUBLIC_IMAGE_URL + item?.photo}
                         width={100}

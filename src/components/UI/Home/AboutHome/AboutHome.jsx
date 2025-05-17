@@ -6,9 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button/Button";
 const AboutHome = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

@@ -3,9 +3,7 @@ import Link from "next/link";
 import ButtonOutline from "../../Button/ButtonOutline";
 import BlogSection from "./BlogSection";
 const Blogs = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

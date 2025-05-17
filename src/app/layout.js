@@ -12,8 +12,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: {
-    default: "Asian It Inc",
-    template: `%s | Asian It Inc`,
+    default: "Core mind soft",
+    template: `Core mind soft`,
   },
   keywords: [
     "Asian It Inc",
@@ -24,7 +24,7 @@ export const metadata = {
     "WordPress themes",
   ],
   icons: {
-    icon: `https://i.ibb.co.com/w7HRw2Q/logo.webp`, 
+    icon: `https://i.ibb.co.com/w7HRw2Q/logo.webp`,
   },
   description:
     "Asian It Inc provides custom web and mobile app solutions for businesses.",

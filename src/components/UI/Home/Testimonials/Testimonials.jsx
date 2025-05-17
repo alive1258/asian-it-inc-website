@@ -3,9 +3,7 @@ import SwiperTestimonial from "./SwiperTestimonial";
 import TitleSection from "../titleSection/TitleSection";
 
 const Testimonials = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/testimonial`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/testimonial`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 const WhyTrustUs = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/why-trust-us`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/why-trust-us`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

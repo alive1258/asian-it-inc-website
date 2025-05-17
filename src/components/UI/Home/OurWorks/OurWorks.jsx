@@ -4,9 +4,7 @@ import Button from "../../Button/Button";
 import WorksCard from "./WorksCard";
 
 const OurWorks = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-works`, {
-    next: { revalidate: 10 }, // Revalidate every 10 seconds (ISR behavior)
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/our-works`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
