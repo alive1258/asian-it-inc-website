@@ -1,22 +1,17 @@
-import React from "react";
 import TechnologyCard from "./TechnologyCard";
 
 const Technologies = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/technologies`, {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/technologies`);
   const data = await res.json();
   const technologies = data?.data || [];
   return (
     <>
       <div className=" bg-white">
-        <div className="container py-16">
+        <div className="container md:py-16 py-7">
           <div className="flex justify-center pt-14 ">
             <div>
               <h1
-                className="text-[40px] font-semibold text-center"
+                className="md:text-[40px]  text-[30px] font-semibold text-center"
                 style={{
                   background:
                     "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
@@ -26,20 +21,22 @@ const Technologies = async () => {
               >
                 Our Software Development Technologies
               </h1>
-              <p className="text-[20px] pt-2 font-normal text-center ">
-                Lorem ipsum dolor sit amet consectetur. Eu nullam ullamcorper et
-                fermentum pellentesque augue id. Etiam condimentum malesuada
-                quis dui aliquet in aliquam. Arcu pellentesque morbi mattis
-                risus potenti mi. Dictum sem leo eros rhoncus fermentum varius
-                pellentesque.
+              <p className="md:text-[20px] text-[16px] pt-2 font-normal text-center ">
+                Core Mind Soft. provides innovative software development
+                solutions tailored to meet business needs with efficiency and
+                reliability. We prioritize innovation, scalability, and security
+                to create robust digital experiences.Our team of experts ensures
+                seamless development, meeting industry standards and client
+                expectations. With a commitment to excellence, we transform
+                ideas into high-performance software solutions.
               </p>
             </div>
           </div>
           <div className="pt-16 flex flex-wrap  gap-5 ">
             {/* skill */}
 
-            {technologies?.map((skill) => (
-              <TechnologyCard key={skill?.id} item={skill} />
+            {technologies?.map((skill, index) => (
+              <TechnologyCard key={skill?.id} item={skill} index={index} />
             ))}
           </div>
         </div>

@@ -53,23 +53,23 @@ const Navbar = () => {
                 isScrolled ? "text-[#3137F8]" : "text-[#fff]"
               }`}
             >
-              ASIAN IT INC
+              Core Mind Soft
             </h3>
           </div>
         </Link>
 
         {/* Hamburger Button for Mobile */}
-        <div className="md:hidden">
+        <div className="md:hidden block ">
           <button className="pt-1.5 rounded-md" onClick={topFunction}>
             {open ? (
               <HiMiniXMark
-                className={`size-9 text-lg ${
+                className={`size-10 bg-[#F4EDF7] rounded-lg p-1 text-lg ${
                   isScrolled ? "text-gray-900" : "text-red-900"
                 }`}
               />
             ) : (
               <HiOutlineBars3BottomLeft
-                className={`size-10 bg-[#F4EDF7] rounded-lg p-2 text-lg ${
+                className={`size-10 bg-[#F4EDF7] rounded-lg p-1 text-lg ${
                   isScrolled ? "text-gray-900" : "text-primary-base"
                 }`}
               />
@@ -87,15 +87,15 @@ const Navbar = () => {
         >
           {items.map(({ display, path }) => {
             const isActive = pathName === path;
-            const isActiveAbout = pathName === "/about-us";
+
             return (
               <Link
                 onClick={topFunction}
                 key={display}
-                className={`md:ml-6 font-normal duration-300  ${
+                className={`md:ml-6 hover:text-[#3137F8]  font-normal ${
                   isActive
                     ? `font-semibold  ${
-                        isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
+                        isScrolled ? "text-[#3137F8] " : "text-[#3137F8] "
                       }`
                     : `${isScrolled ? "md:text-gray-900" : "md:text-white"}`
                 }`}
@@ -103,32 +103,19 @@ const Navbar = () => {
               >
                 {display}
               </Link>
-              // <Link
-              //   onClick={topFunction}
-              //   key={display}
-              //   className={`md:ml-6 font-normal duration-300 ${
-              //     isActive
-              //       ? `font-semibold ${
-              //           isScrolled ? "text-[#3137F8]" : "text-[#3137F8]"
-              //         }`
-              //       : `${
-              //           isActiveAbout
-              //             ? "text-gray-900" // Always apply text-gray-900 for About Us
-              //             : isScrolled
-              //             ? "md:text-gray-900"
-              //             : "md:text-white"
-              //         }`
-              //   }`}
-              //   href={path}
-              // >
-              //   {display}
-              // </Link>
             );
           })}
 
-          <div className="md:ml-8">
-            <Link href="/contact-us">
-              <ButtonOutline className="text-black" content="Contact Us" />
+          <div className="md:ml-6 ">
+            <Link onClick={topFunction} href="/contact-us">
+              <ButtonOutline
+                className={` ${
+                  isScrolled
+                    ? "bg-[#fff] shadow-md text-gray-900"
+                    : " text-black bg-transparent"
+                }`}
+                content="Contact Us"
+              />
             </Link>
           </div>
         </ul>

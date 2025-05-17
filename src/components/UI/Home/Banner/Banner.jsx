@@ -4,6 +4,9 @@ import React from "react";
 import Button from "../../Button/Button";
 import Image from "next/image";
 import asianItIncLogo from "../../../../../public/assets/images/logo.png";
+import manPic from "../../../../../public/assets/images/manA.jpg";
+import man1Pic from "../../../../../public/assets/images/manA1.jpg";
+import man2Pic from "../../../../../public/assets/images/manA3.jpg";
 
 import { FaStar } from "react-icons/fa";
 import OurTechnology from "./OurTechnology";
@@ -26,27 +29,29 @@ const Banner = async () => {
   const bannersData = data?.data || [];
   return (
     <>
-      <div className="bg-[url('/assets/images/bannerbg.png')] bg-cover bg-center bg-no-repeat  pb-[72px] pt-14">
+      <div className="bg-[url('/assets/images/bannerbg.png')] bg-cover bg-center bg-no-repeat  pb-[72px] md:pt-14 pt-4">
         <div className="md:pt-32 pt-28 md:flex items-center ">
           <div className="container  relative md:flex  justify-between gap-8 md:gap-[71px]">
             <div>
               <div className=" space-5">
-                <h2 className=" text-white  text-base md:text-lg  capitalize">
-                  {" "}
+                <h2 className=" text-[#DEDEDE]  text-base md:text-lg  capitalize">
                   {bannersData.name}
                 </h2>
                 <h1
-                  className="text-[25px] md:text-[35px] lg:text-[45px] leading-normal font-semibold"
+                  className="text-[25px] md:text-[35px] lg:text-[54px] leading-normal font-semibold"
                   style={{
                     background:
                       "linear-gradient(91deg, #A26AFF 0.69%, #3238F8 99.63%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
+                    // textShadow: "1px 3px 0px #69089A",
+                    webkitTextStrokeWidth: "1",
+                    // boxShadow: "1px 3px 0px 0px #69089A",
                   }}
                 >
                   {bannersData.title}
                 </h1>
-                <p className="pt-6 text-sm md:text-base text-[#fff]">
+                <p className="pt-6 text-sm md:text-base text-[#DEDEDE]">
                   {bannersData.description}
                 </p>
               </div>
@@ -66,21 +71,21 @@ const Banner = async () => {
                 <div className="flex -space-x-3">
                   <Image
                     className="md:size-12 border-[#7579FA] border-2  size-9 rounded-full"
-                    src={asianItIncLogo}
+                    src={manPic}
                     height={28}
                     width={151}
                     alt="logo"
                   />
                   <Image
                     className="md:size-12 border-[#7579FA] border-2  size-9 rounded-full"
-                    src={asianItIncLogo}
+                    src={man1Pic}
                     height={28}
                     width={151}
                     alt="logo"
                   />
                   <Image
                     className="md:size-12 border-[#7579FA] border-2  size-9 rounded-full"
-                    src={asianItIncLogo}
+                    src={man2Pic}
                     height={28}
                     width={151}
                     alt="logo"

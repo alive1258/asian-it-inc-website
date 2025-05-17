@@ -2,9 +2,9 @@ import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 import Contact from "@/components/UI/Home/Contact/Contact";
 export async function generateMetadata() {
   return {
-    title: `Contact Us | Asian it inc`,
+    title: `Contact Us |  Core Mind Soft`,
     description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   };
 }
 const ContactPage = () => {

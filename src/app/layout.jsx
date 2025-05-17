@@ -1,13 +1,13 @@
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Providers from "@/lib/Providers/Providers";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
+// Define the local font correctly
+const myFont = localFont({
+  src: "../../public/font/Outfit-VariableFont_wght.ttf", // Use a direct string path
+  display: "swap", // Optional: Improves performance
 });
 
 export const metadata = {
@@ -16,7 +16,7 @@ export const metadata = {
     template: `Core mind soft`,
   },
   keywords: [
-    "Asian It Inc",
+    " Core Mind Soft",
     "Web development services",
     "Next.js solutions",
     "Custom web solutions",
@@ -24,27 +24,27 @@ export const metadata = {
     "WordPress themes",
   ],
   icons: {
-    icon: `https://i.ibb.co.com/w7HRw2Q/logo.webp`,
+    icon: `https://i.ibb.co/fdKNr8xJ/logo-1.webp`,
   },
   description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+    " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   openGraph: {
     type: "website",
     url: "https://www.asianitinc.com",
-    title: "Asian It Inc - Web and Mobile Solutions",
+    title: " Core Mind Soft - Web and Mobile Solutions",
     description: "Custom Web and mobile app solutions tailored for businesses.",
     images: [
       {
-        url: "https://i.ibb.co.com/w7HRw2Q/logo.webp",
+        url: "https://i.ibb.co/w7HRw2Q/logo.webp", // Fix incorrect URL
         width: 800,
         height: 600,
-        alt: "Asian It Inc Logo",
+        alt: " Core Mind Soft Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Asian It Inc - Web and Mobile Solutions",
+    title: " Core Mind Soft - Web and Mobile Solutions",
     description: "Custom web and mobile app solutions tailored for businesses.",
     image: "https://www.asianitinc.com/images/twitter",
   },
@@ -53,7 +53,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-[#fff]`}>
+      <body className={`${myFont.className} bg-[#fff]`}>
         <Providers>
           {children}
           <ToastContainer />

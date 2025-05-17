@@ -2,9 +2,9 @@ import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 
 export async function generateMetadata() {
   return {
-    title: `Privacy policy | Asian it inc`,
+    title: `Privacy policy |  Core Mind Soft`,
     description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   };
 }
 

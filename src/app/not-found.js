@@ -23,9 +23,9 @@ const NotFoundPage = () => {
           </div>
 
           {/* Button to navigate back to home page */}
-          <div className="text-center mt-6">
+          <div className="flex justify-center items-center mt-6 ">
             <Link href="/">
-              <Button content="Go Back to Home" />
+              <Button className="w-full" content="Go Back to Home" />
             </Link>
           </div>
         </div>

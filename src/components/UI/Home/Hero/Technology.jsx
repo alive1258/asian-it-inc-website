@@ -3,12 +3,7 @@ import OurTechnology from "./OurTechnology";
 const Technology = async () => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/technologies`,
-      {
-        next: {
-          revalidate: 30,
-        },
-      }
+      `${process.env.NEXT_PUBLIC_API_URL}/technologies`
     );
     const ourTechnologies = await response.json();
 

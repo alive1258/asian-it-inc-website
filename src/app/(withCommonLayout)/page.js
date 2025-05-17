@@ -9,25 +9,23 @@ import OurWorks from "@/components/UI/Home/OurWorks/OurWorks";
 import ServiceMarquee from "@/components/UI/Home/ServiceMarquee/ServiceMarquee";
 import Testimonials from "@/components/UI/Home/Testimonials/Testimonials";
 import WhyTrustUs from "@/components/UI/Home/WhyTrustUs/WhyTrustUs";
-import Service from "@/components/UI/OurServices/services/Service";
+// import Service from "@/components/UI/OurServices/services/Service";
 
 export default function Home() {
   return (
     <>
-      <main>
-       <Banner />
-        <ServiceMarquee /> 
-        <Service /> 
-        <AboutHome />
-        <OurProducts /> 
-        <WhyTrustUs />
-        <Brands />
-        <OurWorks />
-        <Testimonials />
-        <Blogs />
-        <FaqHome />
-        <Contact />
-      </main>
+      <Banner />
+      <ServiceMarquee />
+      {/* <Service /> */}
+      <AboutHome />
+      <OurProducts />
+      <WhyTrustUs />
+      <Brands />
+      <OurWorks />
+      <Testimonials />
+      <Blogs />
+      <FaqHome />
+      <Contact />
     </>
   );
 }

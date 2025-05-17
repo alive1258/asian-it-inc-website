@@ -1,4 +1,3 @@
-import React from "react";
 import SwiperTestimonial from "./SwiperTestimonial";
 import TitleSection from "../titleSection/TitleSection";
 
@@ -8,6 +7,7 @@ const Testimonials = async () => {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
+
   const data = await res.json();
   const testimonialsData = data?.data || [];
   return (
@@ -16,9 +16,8 @@ const Testimonials = async () => {
         <div className="pt-14">
           <TitleSection
             color={true}
-            name={"FAQS"}
-            description={` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt dolore.`}
+            name={"TESTIMONIALS"}
+            description={`Our clients trust  Core Mind Soft. for delivering high-quality, custom software and website solutions that drive real business results. They praise our professionalism, technical expertise, and commitment to exceeding expectations`}
             title={"  What clients say"}
           />
         </div>

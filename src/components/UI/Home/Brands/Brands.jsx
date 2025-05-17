@@ -13,12 +13,28 @@ const Brands = async () => {
   const brandsData = data?.data || [];
   return (
     <>
-      <div>
-        <div className="absolute z-[0] w-[180px] flex-shrink-0 h-[180px] bg-[#75FF03]  opacity-40 blur-[150px]" />
-        <div className="absolute z-[0] w-[180px] flex-shrink-0 h-[180px] top-0 -left-[200px] bg-[#FFC903]  opacity-40 blur-[150px]" />
-        <div className="absolute z-[0] w-[180px]  h-[180px] top-0 rounded-[330px]  right-0 bg-[#FF0303]  opacity-70 blur-[150px]" />
-        <div className="container relative overflow-hidden">
-          <div className="flex justify-center py-14 ">
+      <div className="relative overflow-hidden">
+        <div
+          className="absolute rounded-full opacity-40 blur-[150px] bg-[#952fe9]"
+          style={{
+            width: "593.727px",
+            height: "531.226px",
+            right: "0px",
+            top: "-365.17px",
+          }}
+        ></div>
+        {/* Blurred Effect - Blue Circle */}
+        <div
+          className="absolute rounded-full opacity-[0.38] blur-[125px] bg-[#5158DA]"
+          style={{
+            width: "699.729px",
+            height: "626.07px",
+            left: "152.271px",
+            bottom: "-477.762px",
+          }}
+        ></div>
+        <div className="container  ">
+          <div className="flex justify-center md:py-14 py-5">
             <div
               style={{
                 background:
@@ -27,14 +43,14 @@ const Brands = async () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              <h1 className="text-[40px] font-semibold text-center">
+              <h1 className="md:text-[40px] text-[30px] font-semibold text-center">
                 Trusted by {brandsData?.length} + Brands
               </h1>
             </div>
           </div>
 
           <div>
-            <div className="py-12">
+            <div className="md:py-12 py-5">
               <Marquee
                 gradient={false}
                 speed={80}

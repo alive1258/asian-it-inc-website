@@ -5,16 +5,16 @@ import OurWorks from "@/components/UI/Home/OurWorks/OurWorks";
 import HeroBanners from "@/components/shared/hero-banners/HeroBanners";
 export async function generateMetadata() {
   return {
-    title: `Our works | Asian it inc`,
+    title: `Our works |  Core Mind Soft`,
     description:
-    "Asian It Inc provides custom web and mobile app solutions for businesses.",
+      " Core Mind Soft provides custom web and mobile app solutions for businesses.",
   };
 }
 const page = () => {
   return (
     <>
       <div>
-      <HeroBanners />
+        <HeroBanners />
         <OurWorks />
         <Brands />
         <Testimonials />
